@@ -1,28 +1,40 @@
 {
+  "name": "sugar-and-spice",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
     "bcrypt": "^5.0.1",
-    "build": "^0.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "favicon": "^0.0.2",
+    "gapi-script": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.4.6",
+    "mongoose": "^6.4.0",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
+    "react-calendly": "^4.0.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.1",
+    "rowdy-logger": "^1.0.2",
     "serve-favicon": "^2.5.0",
-    "tailwindcss": "^3.1.6"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "seed": "node /seed.js"
+    "seedTodo": "node /seedTodo.js"
   },
-  "proxy": "http://localhost:3015",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,5 +46,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
