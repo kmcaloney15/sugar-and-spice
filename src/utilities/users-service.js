@@ -1,7 +1,7 @@
 // Import all named exports attached to a usersAPI object
 // This syntax can be helpful documenting where the methods come from 
 import * as usersAPI from './users-api'
-import jwt_decode from 'jwt-decode';
+// import jwt_decode from 'jwt-decode';
 
 export async function signUp(userData) {
     // Delegate the network request code to the users-api.js API module
@@ -23,7 +23,7 @@ export function getToken() {
     // getItem return null if there's no string
     const token = localStorage.getItem('token')
     if (!token) {
-        console.log('no token in localStorage')
+        // console.log('no token in localStorage')
         return null
     }
     // Obtain the payload of the token
@@ -37,13 +37,13 @@ export function getToken() {
         localStorage.removeItem('token')
         return null
     }
-    console.log(`I found this token, ${token}`)
+    // console.log(`I found this token, ${token}`)
     return token
 }
 
 export function getUser() {
     const token = getToken()
-    console.log(`Token is ${token}`)
+    // console.log(`Token is ${token}`)
     // If there's a token, return the user in the payload, otherwise return null
     return token ? JSON.parse(atob(token.split('.')[1])).user : null
     // return token ? JSON.parse(jwt_decode(token.split('.')[1])).user : null

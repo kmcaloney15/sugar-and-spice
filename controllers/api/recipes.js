@@ -13,13 +13,16 @@ module.exports = {
 
 // Sorting all the todos by catetory. Might want to change this later -K
 async function index(req, res) {
+  console.log('is the index working?')
   try {
+    const recipeList = await Recipe.find({});
+    
 
     // const recipeList = await Recipe.find({}).populate('category').exec();
     // .populate('category').exec();
     // re-sort based upon the sortOrder of the categories
     // todos.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
-    // res.json(recipeList);
+    res.json(recipeList);
   } catch {
     res.status(400).json('Bad Serverside')
   }
