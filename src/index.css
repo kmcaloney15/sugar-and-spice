@@ -1,0 +1,64 @@
+/* CSS Custom Properties */
+#stone {
+    background-color: #7b7e63;
+  }
+  
+  #offwhite {
+    background-color: #f7f7f2;
+  }
+  
+  .stone2 {
+    border-color: red;
+  }
+  
+  #logo {
+    font-size: 3.7rem; /* 48px */
+    line-height: 0.5;
+  }
+  
+  .homemargin {
+    margin: 0 0 -5px 0;
+  }
+  
+  .lessmargin {
+    margin: -5px 0 -5px 0;
+  }
+  
+  .borderright {
+    border-right-width: 8px;
+    border-color: #7b7e63;
+  }
+  
+  #clearsight {
+    text-shadow: 3px 3px 0px rgba(31, 31, 31, 1);
+  }
+  
+  #diagonal {
+    background-image: #1f1f1f;
+    transform: skewY(-5deg);
+  }
+  #diagonal2 {
+    background-image: #1f1f1f;
+    transform: skewY(-5deg);
+  }
+  
+  #revdiagonal {
+    max-width: 50em;
+    transform: skewY(5deg);
+  }
+  
+  .form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  #hardshadow {
+    box-shadow: 5px 5px 0px 0px rgb(0 0 0 / 1), 5px 5px 0px 0px rgb(0 0 0 / 1);
+  }
+  
+  #textboxid {
+    height: 100px;
+  }
+  
