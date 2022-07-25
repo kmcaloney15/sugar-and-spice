@@ -35,6 +35,10 @@ app.use("/api/notes", require("./routes/api/notes"));
 // Todos API Routes
 app.use("/api/todos", require("./routes/api/todos"));
 
+// Recipe API Routes
+app.use("/api/recipes", require("./routes/api/recipes"));
+
+
 // Appointments API Routes
 // app.use("/api/appointments", require("./routes/api/appointments"));
 
@@ -49,6 +53,6 @@ app.get("/*", function (req, res) {
 const port = process.env.PORT || 3001;
 
 app.listen(port, function () {
-  rowdyResults.print()
+//   rowdyResults.print()
   console.log(`Express app running on port ${port}`);
 });
