@@ -31,8 +31,8 @@ const recipeSchema = new Schema(
   { timestamps: true }
 );
 
-// make todo model
-// const Todo = model("Todo", todoSchema);
+// make recipe model
+const Recipe = model("Recipe", recipeSchema);
 
 // make category model
 // const Category = model("Category", categorySchema);
@@ -41,4 +41,4 @@ const recipeSchema = new Schema(
 // Export Model
 ///////////////////////////////////////////////////
 // Adding Notes
-module.exports = Todo;
+module.exports = Recipe;
