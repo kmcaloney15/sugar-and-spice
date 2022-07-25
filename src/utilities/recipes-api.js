@@ -15,7 +15,7 @@ export function deleteRecipe(id) {
 //   return sendRequest(`${BASE_URL}/editTodo/${id}`, "PUT");
 // }
 
-// Add an cat to the cat list
+// Add an recipe to the recipe list
 export function newRecipe(recipeData) {
   // Just send itemId for best security (no pricing)
   console.log(recipeData)

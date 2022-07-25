@@ -40,6 +40,8 @@ let viewMode = {}
                       </Link>
             <p>Prep time: {recipe.prepTime} &nbsp; Cook time: {recipe.cookTime} &nbsp; Total time: {recipe.totalTime}</p>
             <p>{recipe.categories}</p>
+            <p>{recipe.ingredient}</p>
+            <p>{recipe.directions}</p>
             <p>{recipe.description}</p>
           </div>
         ))}

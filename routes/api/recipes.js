@@ -9,9 +9,11 @@ router.get('/', recipesCtrl.index);
 router.post('/newRecipe', recipesCtrl.create);
 
 // POST /api/todos
-router.put("/editRecipe/:id", recipesCtrl.editTodo);
+// FIXME - edit route is throwing an error
+// router.put("/editRecipe/:id", recipesCtrl.editTodo);
 
 // DELETE /api/todos/:id
+// FIXME - delete route is throwing an error 
 // router.delete('/deleteRecipe/:id', recipesCtrl.deleteTodo);
 
 // GET /api/todos/:id

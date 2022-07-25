@@ -7,7 +7,7 @@ module.exports = {
   create,
   // findAllRecipe,
   deleteRecipe,
-  editTodo,
+  // editRecipe,
   show
 };
 
@@ -68,32 +68,31 @@ async function deleteRecipe(req, res) {
   try {
     console.log(req.params.id)
     const one = await Recipe.findByIdAndDelete(req.params.id)
-    // const todoList = await Todo.find({})
-    // await todoList.save()
+    // const recipeList = await Todo.find({})
+    // await recipeList.save()
     // res.json(todoList)
   } catch (e) {
     res.status(400).json(e);
   }
 }
 
-// to edit a todo
-async function editTodo(req, res) {
-  const todoList = await Todo.findByIdAndUpdate(
-    {_id:req.params.id},
-    {
-      title: req.body.title,
-      date: req.body.date,
-      description: req.body.description,
-      urgency: req.body.urgency,
-    },{new:true}
-  );
-
-  
-  console.log("edit starated")
-}
+// to edit a recipe
+// async function editRecipe(req, res) {
+//   const recipeList = await Recipe.findByIdAndUpdate(
+//     {_id:req.params.id},
+//     { 
+//       // FIXME - need to update the with the recipe model info
+//       name: req.body.name,
+//       date: req.body.date,
+//       description: req.body.description,
+//     },{new:true}
+//   );
+//   console.log("edit starated")
+// }
 
 async function show(req, res) {
+  console.log('recipe contl show is working')
   console.log("req.params.id")
-  const todoList = await Todo.findById(req.params.id);
-  res.json(todoList);
+  const recipeList = await Recipe.findById(req.params.id);
+  res.json(recipeList);
 }
