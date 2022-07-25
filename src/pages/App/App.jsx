@@ -11,12 +11,13 @@ export default function App() {
   const [user, setUser] = useState(getUser())
   return (
     <main className="App">
+      <h1>Chester the Tester</h1>
       {user ?
       <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/recipe" element={<RecipeIndex />} />
+            <Route path="/recipes" element={<RecipeIndex />} />
           </Routes>
       </>
       :

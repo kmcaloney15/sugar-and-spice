@@ -27,13 +27,13 @@ app.use(require("./config/checkToken"));
 app.use("/api/users", require("./routes/api/users"));
 
 // Categories API Routes
-app.use("/api/categories", require("./routes/api/categories"));
+// app.use("/api/categories", require("./routes/api/categories"));
 
-// Notes API Routes
-app.use("/api/notes", require("./routes/api/notes"));
+// // Notes API Routes
+// app.use("/api/notes", require("./routes/api/notes"));
 
-// Todos API Routes
-app.use("/api/todos", require("./routes/api/todos"));
+// // Todos API Routes
+// app.use("/api/todos", require("./routes/api/todos"));
 
 // Recipe API Routes
 app.use("/api/recipes", require("./routes/api/recipes"));
@@ -44,13 +44,13 @@ app.use("/api/recipes", require("./routes/api/recipes"));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
+// app.get("/*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3005;
 
 app.listen(port, function () {
 //   rowdyResults.print()

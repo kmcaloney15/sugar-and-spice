@@ -14,9 +14,9 @@ export default function NavBar({ user, setUser }) {
 
     return(
         <nav>
-            <Link to="/recipies">Recipe Index</Link>
+            <Link to="/recipes">Recipe Index</Link>
             &nbsp; | &nbsp;
-            <Link to="/orders/new">New Order</Link>
+            <Link to="/home">New Order HELPPPPP</Link>
             &nbsp; | &nbsp;
             Welcome, { user.name }
             &nbsp; | &nbsp;

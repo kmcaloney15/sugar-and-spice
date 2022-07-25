@@ -1,4 +1,6 @@
 import * as usersService from '../../utilities/users-service'
+import { Link } from 'react-router-dom'
+import RecipeList from '../../components/RecipeList/RecipeList'
 
 export default function OrderHistoryPage() {
 
@@ -10,7 +12,8 @@ export default function OrderHistoryPage() {
     return (
         <>
             <h1>Recipe Index</h1>
-            <button onClick={handleCheckToken}>Check When My Login Expires</button>
+            <RecipeList />
+            {/* <button onClick={handleCheckToken}>Check When My Login Expires</button> */}
         </>
         
     );

@@ -11,6 +11,7 @@
     "express": "^4.18.1",
     "gapi-script": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "mongoose": "^6.4.0",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
@@ -26,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "seedTodo": "node /seedTodo.js"
+    "seed": "node /seed.js"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3501"
+  "proxy": "http://localhost:3000"
 }
