@@ -1,5 +1,4 @@
-<!-- # ClearSight -->
-![ClearSight](./img/clearsight.png)
+# Sugar and Spice
 
 
 ## Premise: 
