@@ -37,6 +37,7 @@ export default function RecipeDetailPage({
   });
 
   let { id } = useParams();
+  const magic = setUpdated();
 
   useEffect(
     function () {
@@ -65,7 +66,11 @@ export default function RecipeDetailPage({
     setFormData({});
   }
 
-
+  function handleChange(evt) {
+    const updatedRecipe = { ...formData, [evt.target.name]: evt.target.value };
+    setFormData(updatedRecipe);
+    console.log(formData);
+  }
 
   return (
     <>
