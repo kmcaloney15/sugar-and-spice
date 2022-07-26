@@ -22,6 +22,11 @@ export function newRecipe(recipeData) {
   return sendRequest(`${BASE_URL}/newRecipe`, "POST", recipeData);
 }
 
+// get a recipe by id
+export function getById(id) {
+  return sendRequest(`${BASE_URL}/${id}`, "GET");
+}
+
 /*--- Helper Functions ---*/
 
 async function sendRequest(url, method = "GET", payload = null) {
