@@ -113,11 +113,15 @@ async function deleteRecipe(evt) {
             setUpdated={setUpdated}
         />
     </div> */}
-        <div>
+        <div className="border-black border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3  text-left" key={recipe._id}>
           <h1>{recipe.name}</h1>
           <p>{recipe.description}</p>
+          <p>Prep time: {recipe.prepTime} &nbsp; Cook time: {recipe.cookTime} &nbsp; Total time: {recipe.totalTime}</p>
+            <p>Category: {recipe.categories}</p>
+            <p>Ingredients: {recipe.ingredient}</p>
+            <p>Directions: {recipe.directions}</p>
+            <p>Description: {recipe.description}</p>
         </div>
-        <p>testing text</p>
 
         <button
           className="border-1 border-black bg-black  rounded text-white text-sm px-1 mx-2"

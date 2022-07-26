@@ -13,7 +13,7 @@ module.exports = {
 
 // Sorting all the todos by catetory. Might want to change this later -K
 async function index(req, res) {
-  console.log('is the index working?')
+  // console.log('is the index working?')
   try {
     const recipeList = await Recipe.find({});
     
