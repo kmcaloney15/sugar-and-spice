@@ -22,7 +22,7 @@ export default function RecipeList({allRecipes, setAllRecipes, setUpdated, updat
     notes: "",
   });
 
-  console.log(allRecipes)
+  // console.log(allRecipes)
 let viewMode = {}
 
   return (

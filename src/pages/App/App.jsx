@@ -4,6 +4,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
 import RecipeIndex from "../RecipeIndex/RecipeIndex";
 import RecipeDetailPage from "../../components/RecipeDetailPage/RecipeDetailPage";
+import NewRecipeForm from "../../components/NewRecipeForm/NewRecipeForm";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import { getUser } from "../../utilities/users-service";
@@ -21,7 +22,7 @@ export default function App() {
       async function getRecipes() {
         console.log("getRecipes");
         const recipes = await recipeAPI.getAll();
-        console.log(recipes);
+        // console.log(recipes);
         setAllRecipes(recipes);
       }
       getRecipes();
@@ -29,7 +30,7 @@ export default function App() {
     [updated]
   );
 
-  console.log(allRecipes);
+  // console.log(allRecipes);
 
   return (
     <main className="App">
@@ -49,7 +50,17 @@ export default function App() {
                 />
               }
             />
-
+            <Route
+              path="/recipes/new"
+              element={
+                <NewRecipeForm
+                  allRecipes={allRecipes}
+                  setAllRecipes={setAllRecipes}
+                  updated={updated}
+                  setUpdated={setUpdated}
+                />
+              }/>
+       
             <Route
               path="/recipes/:id"
               element={

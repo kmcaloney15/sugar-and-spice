@@ -38,7 +38,7 @@ export default function RecipeDetailPage({
 
   let { id } = useParams();
   const magicObject = {updated};
-  console.log(magicObject.updated)
+  console.log(magicObject.updated) // returning false... why??
 
   useEffect(
     function () {

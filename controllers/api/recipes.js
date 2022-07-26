@@ -32,7 +32,7 @@ async function index(req, res) {
 
 // create new todos
 async function create(req, res) {
-  // console.log(req.body) // this is the body of the request
+  console.log(req.body) // this is the body of the request
   try {
 
     // const one = Category.findOne({title:req.body.category})

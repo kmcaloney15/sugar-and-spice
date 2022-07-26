@@ -5,8 +5,8 @@ const recipesCtrl = require('../../controllers/api/recipes');
 // GET /api/todos
 router.get('/', recipesCtrl.index);
 
-//POST /api/todos/new
-router.post('/newRecipe', recipesCtrl.create);
+//POST /api/recipes/new
+router.post('/new', recipesCtrl.create);
 
 // POST /api/todos
 // FIXME - edit route is throwing an error
