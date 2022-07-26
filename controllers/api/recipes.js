@@ -7,7 +7,7 @@ module.exports = {
   create,
   // findAllRecipe,
   deleteRecipe,
-  // editRecipe,
+  editRecipe,
   show
 };
 

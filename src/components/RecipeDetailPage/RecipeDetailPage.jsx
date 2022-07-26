@@ -37,7 +37,8 @@ export default function RecipeDetailPage({
   });
 
   let { id } = useParams();
-  const magic = setUpdated();
+  const magicObject = {updated};
+  console.log(magicObject.updated)
 
   useEffect(
     function () {
@@ -50,18 +51,21 @@ export default function RecipeDetailPage({
       getSingleRecipe(id);
       //   setActiveCat(activeCat);
       // important to have the brackets below, otherwise infinate loop
-    },
-    [id]
+    },[]
+    // [{updated}]
   );
-
+  
+  //     // FIXME
   async function handleSubmit(evt) {
     evt.preventDefault();
     // console.log(formData)
     const id = recipe._id;
     // console.log(id)
     recipeAPI.editRecipe(id, formData);
-    setUpdated(!magic);
-
+    // need to check for truthyness / check for some value in magic
+    //use a if statment 
+    // I want to check to see if magic has been updated and if so, then setUpdated to the new magic value
+    setUpdated(true)
     setFormData({});
   }
 

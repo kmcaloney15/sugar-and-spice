@@ -35,6 +35,16 @@ async function sendRequest(url, method = "GET", payload = null) {
     options.headers = { "Content-Type": "application/json" };
     options.body = JSON.stringify(payload);
   }
+// TODO need token to make sure someone is actually logged in
+// const token = getToken();
+// if (token) {
+//   // Ensure headers object exists
+//   options.headers = options.headers || {};
+//   // Add token to an Authorization header
+//   // Prefacing with 'Bearer' is recommended in the HTTP specification
+//   options.headers.Authorization = `Bearer ${token}`;
+// }
+
   const res = await fetch(url, options);
   // res.ok will be false if the status code set to 4xx in the controller action
   console.log("sending request");
