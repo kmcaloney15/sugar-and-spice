@@ -48,12 +48,11 @@ export default function RecipeDetailPage({
         setRecipe(foundRecipe);
       }
       getSingleRecipe(id);
-    //   setActiveCat(activeCat);
+      //   setActiveCat(activeCat);
       // important to have the brackets below, otherwise infinate loop
     },
     [id]
   );
-
 
   async function handleSubmit(evt) {
     evt.preventDefault();
@@ -70,6 +69,32 @@ export default function RecipeDetailPage({
     const updatedRecipe = { ...formData, [evt.target.name]: evt.target.value };
     setFormData(updatedRecipe);
     console.log(formData);
+  }
+
+
+//*** fucntion = creating new category ***//
+async function deleteRecipe(evt) {
+    console.log(evt.target.value);
+    const recipes = allRecipes.filter((recipe) => recipe._id !== evt.target.value);
+    console.log(recipes);
+    setAllRecipes(recipes);
+    setUpdated(!updated);
+    await recipeAPI.deleteRecipe(evt.target.value);
+  }
+
+
+  //*** function = Edit data ***//
+  function handleEditing(evt) {
+    setEdit(!edit);
+  }
+
+  let viewMode = {};
+  let editMode = {};
+
+  if (edit) {
+    viewMode.display = "none";
+  } else {
+    editMode.display = "none";
   }
 
   return (
@@ -89,6 +114,25 @@ export default function RecipeDetailPage({
           <p>{recipe.description}</p>
         </div>
         <p>testing text</p>
+
+        <button
+          className="border-1 border-black bg-black  rounded text-white text-sm px-1 mx-2"
+          onClick={handleEditing}
+          style={viewMode}
+        >
+          Edit
+        </button>
+
+        <button
+          type="submit"
+          value={recipe._id}
+          className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400 float-right"
+          // do we want the todo to be deleted when the button is clicked? Like marking it complete... -K
+          onClick={deleteRecipe}
+        >
+          Delete
+        </button>
+
         <Link to="/recipes">
           <button className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400">
             Go To Recipe Page

@@ -63,7 +63,7 @@ async function create(req, res) {
 // to delete a todo
 async function deleteRecipe(req, res) {
   // console.log(req.body)
-  console.log("step 3 delete")
+  console.log("controller delete ran")
 
   try {
     console.log(req.params.id)
@@ -77,18 +77,18 @@ async function deleteRecipe(req, res) {
 }
 
 // to edit a recipe
-// async function editRecipe(req, res) {
-//   const recipeList = await Recipe.findByIdAndUpdate(
-//     {_id:req.params.id},
-//     { 
-//       // FIXME - need to update the with the recipe model info
-//       name: req.body.name,
-//       date: req.body.date,
-//       description: req.body.description,
-//     },{new:true}
-//   );
-//   console.log("edit starated")
-// }
+async function editRecipe(req, res) {
+  const recipeList = await Recipe.findByIdAndUpdate(
+    {_id:req.params.id},
+    { 
+      // FIXME - need to update the with the recipe model info
+      name: req.body.name,
+      date: req.body.date,
+      description: req.body.description,
+    },{new:true}
+  );
+  console.log("edit starated")
+}
 
 async function show(req, res) {
   console.log('recipe contl show is working')
