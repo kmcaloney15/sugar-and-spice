@@ -11,6 +11,30 @@ export default function RecipeDetailPage({
   setUpdated,
 }) {
   const [recipe, setRecipe] = useState([]);
+  const [edit, setEdit] = useState(false);
+  const [formData, setFormData] = useState({
+    title: "",
+    date: "",
+    // time: "",
+    // category: "",
+    description: "",
+    urgency: "",
+
+    name: "",
+    categories: "",
+    servings: "",
+    rating: "",
+    difficulty: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    source: "",
+    sourceUrl: "",
+    ingredient: [""],
+    description: "",
+    directions: "",
+    notes: "",
+  });
 
   let { id } = useParams();
 
@@ -29,6 +53,17 @@ export default function RecipeDetailPage({
     [id]
   );
 
+
+  async function handleSubmit(evt) {
+    evt.preventDefault();
+    // console.log(formData)
+    const id = recipe._id;
+    // console.log(id)
+    recipeAPI.editRecipe(id, formData);
+    setUpdated(!magic);
+
+    setFormData({});
+  }
 
 
 

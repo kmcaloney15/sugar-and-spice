@@ -11,9 +11,9 @@ export function deleteRecipe(id) {
   return sendRequest(`${BASE_URL}/deleteRecipe/${id}`, "DELETE");
 }
 
-// export function editNote(id) {
-//   return sendRequest(`${BASE_URL}/editTodo/${id}`, "PUT");
-// }
+export function editRecipe(id, data) {
+  return sendRequest(`${BASE_URL}/editTodo/${id}`, "PUT", data);
+}
 
 // Add an recipe to the recipe list
 export function newRecipe(recipeData) {
