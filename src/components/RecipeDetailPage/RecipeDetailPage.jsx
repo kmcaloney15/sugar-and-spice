@@ -12,6 +12,26 @@ export default function RecipeDetailPage({
 }) {
   const [recipe, setRecipe] = useState([]);
 
+  let { id } = useParams();
+
+  useEffect(
+    function () {
+      async function getSingleRecipe() {
+        // let foundTodo = allTodos.filter((todo) => todo._id === id)
+        // console.log(foundTodo)
+        const foundRecipe = await recipeAPI.getById(id);
+        setRecipe(foundRecipe);
+      }
+      getSingleRecipe(id);
+    //   setActiveCat(activeCat);
+      // important to have the brackets below, otherwise infinate loop
+    },
+    [id]
+  );
+
+
+
+
   return (
     <>
       <div className="recipe-detail-page">

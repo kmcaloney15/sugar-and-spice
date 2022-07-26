@@ -37,7 +37,7 @@ let viewMode = {}
             {/* <h2>{recipe.name}</h2> */}
             <Link to={`/recipes/${recipe._id}`} style={viewMode}>
                         {recipe.name}
-                      </Link>
+             </Link>
             <p>Prep time: {recipe.prepTime} &nbsp; Cook time: {recipe.cookTime} &nbsp; Total time: {recipe.totalTime}</p>
             <p>{recipe.categories}</p>
             <p>{recipe.ingredient}</p>

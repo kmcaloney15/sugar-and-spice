@@ -22,7 +22,7 @@ const recipeSchema = new Schema(
     totalTime: String,
     source: String,
     sourceUrl: String,
-    ingredient: String,
+    ingredient: [String],
     // ingredient: { type: Schema.Types.ObjectId, ref: "Ingredient" },
     description: String,
     directions: String,
