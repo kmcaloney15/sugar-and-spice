@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams, useNavigate } from "react-router-dom";
 import * as recipeAPI from "../../utilities/recipes-api";
 import RecipeList from "../../components/RecipeList/RecipeList";
 import { Link } from "react-router-dom";
@@ -75,15 +75,18 @@ export default function RecipeDetailPage({
     console.log(formData);
   }
 
+  const navigate = useNavigate();
 
 //*** fucntion = creating new category ***//
 async function deleteRecipe(evt) {
     console.log(evt.target.value);
     const recipes = allRecipes.filter((recipe) => recipe._id !== evt.target.value);
-    console.log(recipes);
+    console.log('delete function running');
     setAllRecipes(recipes);
     setUpdated(!updated);
     await recipeAPI.deleteRecipe(evt.target.value);
+    // want to send user back to recipe index page
+    navigate(-1)
   }
 
 
