@@ -13,7 +13,6 @@ router.post('/new', recipesCtrl.create);
 router.put("/editRecipe/:id", recipesCtrl.editRecipe);
 
 // DELETE /api/todos/:id
-// FIXME - delete route is throwing an error 
 router.delete('/deleteRecipe/:id', recipesCtrl.deleteRecipe);
 
 // GET /api/todos/:id

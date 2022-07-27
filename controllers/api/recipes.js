@@ -86,6 +86,21 @@ async function editRecipe(req, res) {
       name: req.body.name,
       date: req.body.date,
       description: req.body.description,
+
+      name: req.body.name,
+      categories: req.body.categories,
+      servings: req.body.servings,
+      rating: req.body.rating,
+      difficulty: req.body.difficulty,
+      prepTime: req.body.prepTime,
+      cookTime: req.body.cookTime,
+      totalTime: req.body.totalTime,
+      source: req.body.source,
+      sourceUrl: req.body.sourceUrl,
+      ingredient: req.body.ingredient,
+      description: req.body.description,
+      directions: req.body.directions,
+      notes: req.body.notes,
     },{new:true}
   );
   console.log("edit starated")
