@@ -77,8 +77,8 @@ export default function NewRecipeForm({ setUpdated, allRecipes }) {
           id="hardshadow"
         >
           {/* NAME */}
-          <div>
-            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+          {/* <div> */}
+            {/* <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Name
             </label>
             <input
@@ -87,8 +87,21 @@ export default function NewRecipeForm({ setUpdated, allRecipes }) {
               value={formData.name}
               placeholder="write here..."
               className="bg-[#f7f7f2] border-b-[1px] border-black outline-0"
+            /> */}
+            <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Name:
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              placeholder="Recipe name here"
+              className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
             />
           </div>
+
+          {/* </div> */}
           {/* CATEGORY */}
           <div>
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">

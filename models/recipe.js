@@ -6,10 +6,7 @@ const { Schema, model } = mongoose;
 const recipeSchema = new Schema(
   {
     // user: { type: Schema.Types.ObjectId, ref: 'User' },
-    name: {
-      type: String,
-      required: true,
-    },
+    name: String,
     categories: String,
     servings: String,
     rating: Number,
