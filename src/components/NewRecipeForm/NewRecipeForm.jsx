@@ -76,6 +76,7 @@ export default function NewRecipeForm({ setUpdated, allRecipes }) {
           className="border-black border-[1px] rounded-md py-4 px-4 font-light text-justify"
           id="hardshadow"
         >
+            {/* NAME */}
           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Name
           </label>
@@ -86,8 +87,41 @@ export default function NewRecipeForm({ setUpdated, allRecipes }) {
             placeholder="write here..."
             className="bg-[#f7f7f2] border-b-[1px] border-black outline-0"
           />
-          <p>&nbsp;</p>
+          {/* CATEGORY */}
           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+            Category:
+          </label>
+          <input
+            type="text"
+            name="categories"
+            value={formData.categories}
+            placeholder="write here..."
+            className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
+          />
+{/* SERVINGS */}
+<label className="font-light text-left text-lg h-1/2 px-2 py-2">
+            Servings:
+          </label>
+          <input
+            type="text"
+            name="categories"
+            value={formData.servings}
+            placeholder="write here..."
+            className="bg-[#f7f7f2]"
+          />
+
+          {/* RATING */}
+           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+            Rating:
+          </label>
+          <input
+            type="number"
+            name="categories"
+            value={formData.categories}
+            placeholder="write here..."
+            className="bg-[#f7f7f2]"
+          />
+           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Category:
           </label>
           <input
@@ -97,18 +131,26 @@ export default function NewRecipeForm({ setUpdated, allRecipes }) {
             placeholder="write here..."
             className="bg-[#f7f7f2]"
           />
-          <p>&nbsp;</p>
-
+           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+            Category:
+          </label>
+          <input
+            type="text"
+            name="categories"
+            value={formData.categories}
+            placeholder="write here..."
+            className="bg-[#f7f7f2]"
+          />
           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
-            Ingredients
+          Servings
           </label>
 
           <select
-            name="category"
-            value={formData.category}
+            name="servings"
+            value={formData.servings}
             className="font-extralight text-2l text-left h-1/2 px-2 py-2 bg-[#f7f7f2]"
           >
-            // if I want to include categories as a reference
+            {/* // if I want to include categories as a reference */}
             {/* {allCats.map((cat) => (
               <option value={cat._id} key={cat._id}>
                 {cat.title}
@@ -119,7 +161,6 @@ export default function NewRecipeForm({ setUpdated, allRecipes }) {
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
           </select>
-          <p>&nbsp;</p>
 
           <label className="font-light text-left text-lg h-1/2 px-2 py-2">
             Description
