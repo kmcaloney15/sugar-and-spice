@@ -18,7 +18,7 @@ export function editRecipe(id, data) {
 // Add an recipe to the recipe list
 export function newRecipe(recipeData) {
   // Just send itemId for best security (no pricing)
-  console.log(recipeData)
+  console.log(`${recipeData} ran from newRecipe recipe-api`)
   return sendRequest(`${BASE_URL}/newRecipe`, "POST", recipeData);
 }
 
@@ -47,7 +47,7 @@ async function sendRequest(url, method = "GET", payload = null) {
 
   const res = await fetch(url, options);
   // res.ok will be false if the status code set to 4xx in the controller action
-  console.log("sending request");
+  console.log("sending request - recipe-api");
   if (res.ok) return res.json();
   console.log(res.json);
   throw new Error("Not so good. Come on man, you're better than this.");

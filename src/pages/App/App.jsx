@@ -7,8 +7,8 @@ import RecipeDetailPage from "../../components/RecipeDetailPage/RecipeDetailPage
 import NewRecipeForm from "../../components/NewRecipeForm/NewRecipeForm";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
-import { getUser } from "../../utilities/users-service";
-import * as recipeAPI from "../../utilities/recipes-api";
+import { getUser } from "../../utilities - front end/users-service";
+import * as recipeAPI from "../../utilities - front end/recipes-api";
 import { set } from "mongoose";
 
 export default function App() {

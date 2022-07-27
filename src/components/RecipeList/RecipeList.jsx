@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import * as recipeAPI from "../../utilities/recipes-api";
+import * as recipeAPI from "../../utilities - front end/recipes-api";
 
 export default function RecipeList({allRecipes, setAllRecipes, setUpdated, updated}) {
   const [edit, setEdit] = useState(false);

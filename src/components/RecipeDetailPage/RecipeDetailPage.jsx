@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navigate, useParams, useNavigate } from "react-router-dom";
-import * as recipeAPI from "../../utilities/recipes-api";
+import * as recipeAPI from "../../utilities - front end/recipes-api";
 import RecipeList from "../../components/RecipeList/RecipeList";
 import { Link } from "react-router-dom";
 

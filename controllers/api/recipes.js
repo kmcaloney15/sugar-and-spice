@@ -30,23 +30,24 @@ async function index(req, res) {
 
 
 
-// create new todos
+// create new recipes
 async function create(req, res) {
   console.log(req.body) // this is the body of the request
   try {
 
     // const one = Category.findOne({title:req.body.category})
-    // console.log(req.body)
+    console.log('create recipe controller is working')
 
     const newRecipe = await Recipe.create(req.body);
-    // console.log(newTodo)
     const recipeList = await Recipe.find({});
     recipeList.push(newRecipe)
+    console.log('new recipe created')
     console.log(recipeList)
     //.then((todoList) => {console.log(todoList)})
+    console.log(`controller create is ${newRecipe}`)
     await recipeList.save();
-    console.log(recipeList);
-    //res.json(todoList);
+    console.log(`${recipeList} from controller create ran`);
+    res.json(recipeList);
     response.json();
   } catch (e) {
     res.status(400).json(e)
