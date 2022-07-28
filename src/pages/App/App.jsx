@@ -11,12 +11,14 @@ import { getUser } from "../../utilities - front end/users-service";
 import * as recipeAPI from "../../utilities - front end/recipes-api";
 import { set } from "mongoose";
 import { Editor } from "react-draft-wysiwyg";
+import { EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [allRecipes, setAllRecipes] = useState([]);
   const [updated, setUpdated] = useState(false);
+  // const [editorState, setEditorState] = useState();
 
   // recipes
   useEffect(
@@ -61,8 +63,8 @@ export default function App() {
                   updated={updated}
                   setUpdated={setUpdated}
                 />
-              }/>
-       
+              }
+            />
             <Route
               path="/recipes/:id"
               element={
@@ -74,13 +76,14 @@ export default function App() {
                 />
               }
             />
-            <Editor
-  editorState={editorState}
-  toolbarClassName="toolbarClassName"
-  wrapperClassName="wrapperClassName"
-  editorClassName="editorClassName"
-  onEditorStateChange={this.onEditorStateChange}
-/>;
+            {/* <Editor
+              editorState={editorState}
+              toolbarClassName="toolbarClassName"
+              wrapperClassName="wrapperClassName"
+              editorClassName="editorClassName"
+              onEditorStateChange={this.onEditorStateChange}
+            /> */}
+            ;
           </Routes>
         </>
       ) : (

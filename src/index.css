@@ -4,7 +4,7 @@
   --tan-1: #FBF9F6;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
+  --tan-4: #B2AC88;
   --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
@@ -21,9 +21,15 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--white);
   padding: 2vmin;
   height: 100vh;
+}
+
+nav {
+  background-color: #B2AC88;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 code {

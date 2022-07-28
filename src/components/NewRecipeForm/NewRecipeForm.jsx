@@ -137,13 +137,13 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
               className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
             />
           </div>
-          <Editor
+          {/* <Editor
             editorState={editorState}
             toolbarClassName="toolbarClassName"
             wrapperClassName="wrapperClassName"
             editorClassName="editorClassName"
             onEditorStateChange={this.onEditorStateChange}
-          />
+          /> */}
           ;<p>&nbsp;</p>
           <button
             type="submit"
