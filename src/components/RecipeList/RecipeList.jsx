@@ -2,24 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import * as recipeAPI from "../../utilities - front end/recipes-api";
 
-export default function RecipeList({allRecipes, setAllRecipes, setUpdated, updated}) {
+export default function RecipeList({allRecipes, setAllRecipes, setUpdated, updated, formData, setFormData}) {
   const [edit, setEdit] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    categories: "",
-    servings: "",
-    rating: "",
-    difficulty: "",
-    prepTime: "",
-    cookTime: "",
-    totalTime: "",
-    source: "",
-    sourceUrl: "",
-    ingredient: "",
-    description: "",
-    directions: "",
-    notes: "",
-  });
+
 
   // console.log(allRecipes)
 let viewMode = {}

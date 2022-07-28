@@ -4,25 +4,25 @@ import { useState, useEffect } from "react";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, updated}) {
+export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, updated, formData, setFormData}) {
 //   const [createData, setCreateData] = useState(false);
-  const [formData, setFormData] = useState({
-    // add in all fields
-    name: "",
-    categories: "",
-    servings: "",
-    rating: "",
-    difficulty: "",
-    prepTime: "",
-    cookTime: "",
-    totalTime: "",
-    source: "",
-    sourceUrl: "",
-    ingredient: "",
-    description: "",
-    directions: "",
-    notes: "",
-  });
+//   const [formData, setFormData] = useState({
+//     // add in all fields
+//     name: "",
+//     categories: "",
+//     servings: "",
+//     rating: "",
+//     difficulty: "",
+//     prepTime: "",
+//     cookTime: "",
+//     totalTime: "",
+//     source: "",
+//     sourceUrl: "",
+//     ingredient: "",
+//     description: "",
+//     directions: "",
+//     notes: "",
+//   });
 
   //FIXME
     const newData = setUpdated();

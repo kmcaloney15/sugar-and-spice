@@ -9,25 +9,11 @@ export default function RecipeDetailPage({
   setAllRecipes,
   updated,
   setUpdated,
+  formData,
+  setFormData,
 }) {
   // const [recipe, setRecipe] = useState([]);
   const [edit, setEdit] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    categories: "",
-    servings: "",
-    rating: "",
-    difficulty: "",
-    prepTime: "",
-    cookTime: "",
-    totalTime: "",
-    source: "",
-    sourceUrl: "",
-    ingredient: [""],
-    description: "",
-    directions: "",
-    notes: "",
-  });
 
   let { id } = useParams();
 
@@ -57,15 +43,16 @@ export default function RecipeDetailPage({
     recipeAPI.editRecipe(id, formData);
     // need to check for truthyness / check for some value in magic
     //use a if statment
-    // I want to check to see if magic has been updated and if so, then setUpdated to the new magic value
+    // call setAllRecipes here to make sure they render
     setUpdated(true);
     setFormData({});
+    setAllRecipes(...allRecipes.push(formData));
   }
 
   function handleChange(evt) {
     const updatedRecipe = { ...formData, [evt.target.name]: evt.target.value };
     setFormData(updatedRecipe);
-    console.log(formData);
+    // console.log(formData);
   }
 
   const navigate = useNavigate();
@@ -81,7 +68,7 @@ export default function RecipeDetailPage({
     // setUpdated(!updated);
     await recipeAPI.deleteRecipe(evt.target.value);
     // want to send user back to recipe index page
-    navigate(-1);
+    navigate("/recipes");
     // redirects to look into: talk to Eric
   }
 

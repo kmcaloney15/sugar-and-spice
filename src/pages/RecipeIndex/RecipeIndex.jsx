@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import RecipeList from '../../components/RecipeList/RecipeList'
 import * as recipeAPI from "../../utilities - front end/recipes-api";
 
-export default function RecipeIndex({allRecipes, setAllRecipes, setUpdated, updated}) {
+export default function RecipeIndex({allRecipes, setAllRecipes, setUpdated, updated, formData, setFormData}) {
 
     async function handleCheckToken() {
         const expDate = await usersService.checkToken()
@@ -25,6 +25,8 @@ export default function RecipeIndex({allRecipes, setAllRecipes, setUpdated, upda
              setAllRecipes={setAllRecipes}
              updated={updated}
              setUpdated={setUpdated}
+             formData={formData}
+             setFormData={setFormData}
             />
             {/* <button onClick={handleCheckToken}>Check When My Login Expires</button> */}
         </>

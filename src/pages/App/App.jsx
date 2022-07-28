@@ -5,7 +5,7 @@ import NewOrderPage from "../NewOrderPage/NewOrderPage";
 import RecipeIndex from "../RecipeIndex/RecipeIndex";
 import RecipeDetailPage from "../../components/RecipeDetailPage/RecipeDetailPage";
 import NewRecipeForm from "../../components/NewRecipeForm/NewRecipeForm";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate, useParams, useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import { getUser } from "../../utilities - front end/users-service";
 import * as recipeAPI from "../../utilities - front end/recipes-api";
@@ -14,17 +14,37 @@ import { Editor } from "react-draft-wysiwyg";
 import { EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
+
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [allRecipes, setAllRecipes] = useState([]);
   const [updated, setUpdated] = useState(false);
   const [editorState, setEditorState] = useState();
+  const [formData, setFormData] = useState({
+    name: "",
+    categories: "",
+    servings: "",
+    rating: "",
+    difficulty: "",
+    prepTime: "",
+    cookTime: "",
+    totalTime: "",
+    source: "",
+    sourceUrl: "",
+    ingredient: [""],
+    description: "",
+    directions: "",
+    notes: "",
+  });
+
+  // const navigate = useNavigate();
+
 
   // recipes
   useEffect(
     function () {
       async function getRecipes() {
-        console.log("getRecipes");
+        // console.log("getRecipes");
         const recipes = await recipeAPI.getAll();
         // console.log(recipes);
         setAllRecipes(recipes);
@@ -51,6 +71,8 @@ export default function App() {
                   setAllRecipes={setAllRecipes}
                   updated={updated}
                   setUpdated={setUpdated}
+                  formData={formData}
+                  setFormData={setFormData}
                 />
               }
             />
@@ -62,6 +84,8 @@ export default function App() {
                   setAllRecipes={setAllRecipes}
                   updated={updated}
                   setUpdated={setUpdated}
+                  formData={formData}
+                  setFormData={setFormData}
                 />
               }
             />
@@ -73,6 +97,8 @@ export default function App() {
                   setAllRecipes={setAllRecipes}
                   updated={updated}
                   setUpdated={setUpdated}
+                  formData={formData}
+                  setFormData={setFormData}
                 />
               }
             />
