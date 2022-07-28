@@ -5,74 +5,16 @@ import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, updated, formData, setFormData}) {
-//   const [createData, setCreateData] = useState(false);
-//   const [formData, setFormData] = useState({
-//     // add in all fields
-//     name: "",
-//     categories: "",
-//     servings: "",
-//     rating: "",
-//     difficulty: "",
-//     prepTime: "",
-//     cookTime: "",
-//     totalTime: "",
-//     source: "",
-//     sourceUrl: "",
-//     ingredient: "",
-//     description: "",
-//     directions: "",
-//     notes: "",
-//   });
 
-  //FIXME
+
+
     const newData = setUpdated();
 
   async function handleSubmit(evt) {
     evt.preventDefault();
     console.log(`this is the form: ${formData}`);
-
-    // setFormData(formData);
-    // console.log(`this is the new data: ${formData}`);
-    // setCreateData(true);
-    // setFormData({
-    //     name: "",
-    //   categories: "",
-    //   servings: "",
-    //   rating: "",
-    //   difficulty: "",
-    //   prepTime: "",
-    //   cookTime: "",
-    //   totalTime: "",
-    //   source: "",
-    //   sourceUrl: "",
-    //   ingredient: "",
-    //   description: "",
-    //   directions: "",
-    //   notes: "",
-    // })
-
     //sending new data to backend
     recipeAPI.newRecipe(formData);
-    // setUpdated(!newData);
-
-    // get data again from the backend
-    // const recipes = recipeAPI.getAll();
-    // setFormData({
-    //   name: "",
-    //   categories: "",
-    //   servings: "",
-    //   rating: "",
-    //   difficulty: "",
-    //   prepTime: "",
-    //   cookTime: "",
-    //   totalTime: "",
-    //   source: "",
-    //   sourceUrl: "",
-    //   ingredient: "",
-    //   description: "",
-    //   directions: "",
-    //   notes: "",
-    // });
   }
 
   //*** function = form data ***//
@@ -83,7 +25,6 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
     // console.log(`this is the new recipeForm: ${newRecipe}`);
     setFormData(updatedRecipe);
     
-
     console.log(formData);
     console.log(allRecipes);
     // setNewRecipe(evt.target.value);
@@ -91,7 +32,8 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
 
   return (
     <>
-      <div className="p-2 rounded-lg font-light">
+      <div className="p-2 rounded-lg font-light" >
+    
         <div className="font-light text-lg text-left h-1/2 px-2 py-2">
           <h3 className="font-semibold text-lg">Create New Recipe</h3>
         </div>

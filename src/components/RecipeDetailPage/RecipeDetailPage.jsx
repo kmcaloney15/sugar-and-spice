@@ -40,13 +40,10 @@ export default function RecipeDetailPage({
     // console.log(formData)
     const id = formData._id;
     // console.log(id)
-    recipeAPI.editRecipe(id, formData);
-    // need to check for truthyness / check for some value in magic
-    //use a if statment
-    // call setAllRecipes here to make sure they render
-    setUpdated(true);
+    const newishUpdatedRecipe = await recipeAPI.editRecipe(id, formData);
+    setUpdated(!updated);
     setFormData({});
-    setAllRecipes(...allRecipes.push(formData));
+    // setAllRecipes(...allRecipes.push(formData));
   }
 
   function handleChange(evt) {

@@ -7,6 +7,7 @@ const recipeSchema = new Schema(
   {
     // user: { type: Schema.Types.ObjectId, ref: 'User' },
     name: String,
+    users: [String], //where all users my id number - then you can filter for favorites
     categories: String,
     servings: String,
     rating: Number,

@@ -18,6 +18,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [allRecipes, setAllRecipes] = useState([]);
+  const [favoriteRecipes, setFavoriteRecipes] = useState([]);
   const [updated, setUpdated] = useState(false);
   const [editorState, setEditorState] = useState();
   const [formData, setFormData] = useState({
@@ -38,8 +39,6 @@ export default function App() {
   });
 
   // const navigate = useNavigate();
-
-
   // recipes
   useEffect(
     function () {
