@@ -10,6 +10,8 @@ import NavBar from "../../components/NavBar/NavBar";
 import { getUser } from "../../utilities - front end/users-service";
 import * as recipeAPI from "../../utilities - front end/recipes-api";
 import { set } from "mongoose";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -72,6 +74,13 @@ export default function App() {
                 />
               }
             />
+            <Editor
+  editorState={editorState}
+  toolbarClassName="toolbarClassName"
+  wrapperClassName="wrapperClassName"
+  editorClassName="editorClassName"
+  onEditorStateChange={this.onEditorStateChange}
+/>;
           </Routes>
         </>
       ) : (

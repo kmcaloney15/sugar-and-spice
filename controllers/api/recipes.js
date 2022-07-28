@@ -82,11 +82,6 @@ async function editRecipe(req, res) {
   const recipeList = await Recipe.findByIdAndUpdate(
     {_id:req.params.id},
     { 
-      // FIXME - need to update the with the recipe model info
-      name: req.body.name,
-      date: req.body.date,
-      description: req.body.description,
-
       name: req.body.name,
       categories: req.body.categories,
       servings: req.body.servings,
@@ -103,7 +98,7 @@ async function editRecipe(req, res) {
       notes: req.body.notes,
     },{new:true}
   );
-  console.log("edit starated")
+  console.log("editRecipe function ran")
 }
 
 async function show(req, res) {
