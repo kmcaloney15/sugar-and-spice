@@ -2,20 +2,20 @@ const express = require('express');
 const router = express.Router();
 const recipesCtrl = require('../../controllers/api/recipes');
 
-// GET /api/todos
+// GET /api/recipes
 router.get('/', recipesCtrl.index);
 
 //POST /api/recipes/new
-router.post('/new', recipesCtrl.create);
+router.post('/', recipesCtrl.create);
 
-// POST /api/todos
+// POST /api/recipes
 // FIXME - edit route is throwing an error
 router.put("/editRecipe/:id", recipesCtrl.editRecipe);
 
-// DELETE /api/todos/:id
+// DELETE /api/recipes/:id
 router.delete('/deleteRecipe/:id', recipesCtrl.deleteRecipe);
 
-// GET /api/todos/:id
+// GET /api/recipes/:id
 router.get('/:id', recipesCtrl.show);
 
 module.exports = router;

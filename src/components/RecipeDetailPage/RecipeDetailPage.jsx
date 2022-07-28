@@ -43,8 +43,8 @@ export default function RecipeDetailPage({
   useEffect(
     function () {
       async function getSingleRecipe() {
-        // let foundTodo = allTodos.filter((todo) => todo._id === id)
-        // console.log(foundTodo)
+        // let foundrecipe = allrecipes.filter((recipe) => recipe._id === id)
+        // console.log(foundrecipe)
         const foundRecipe = await recipeAPI.getById(id);
         setRecipe(foundRecipe);
       }
@@ -117,13 +117,135 @@ async function deleteRecipe(evt) {
         />
     </div> */}
         <div className="border-black border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3  text-left" key={recipe._id}>
-          <h1>{recipe.name}</h1>
-          <p>{recipe.description}</p>
-          <p>Prep time: {recipe.prepTime} &nbsp; Cook time: {recipe.cookTime} &nbsp; Total time: {recipe.totalTime}</p>
+          {/* NAME */}
+          <h1
+           style={viewMode}
+           className="font-light text-xl border-black border-b-[1px]"
+          >{recipe.name}</h1>
+          <label className="font-extralight text-xl text-2l text-left pt-5">
+                  Name
+                </label>
+                &nbsp;&nbsp;
+          <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  style={editMode}
+                  placeholder={recipe.name}
+                  default
+                  onChange={handleChange}
+                  className="bg-[#f7f7f2]"
+                />
+                {/* DESCRIPTION */}
+          <p
+           style={viewMode}
+           className="font-light text-xl "
+          >{recipe.description}</p>
+          <input
+                  type="text"
+                  name="description"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.description}
+                  value={formData.description}
+                  onChange={handleChange}
+                />
+                <p>&nbsp;</p>
+{/* PREP TIME */}
+          <p
+          style={viewMode}
+          className="font-light text-xl "
+          >Prep time: {recipe.prepTime} </p>
+          <input
+                  type="text"
+                  name="prepTime"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.prepTime}
+                  value={formData.prepTime}
+                  onChange={handleChange}
+                />
+{/* COOK TIME */}
+           &nbsp; 
+           <p
+           style={viewMode}
+           className="font-light text-xl "
+           >Cook time: {recipe.cookTime} </p>
+           &nbsp;
+           <input
+                  type="text"
+                  name="cookTime"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.cookTime}
+                  value={formData.cookTime}
+                  onChange={handleChange}
+                />
+
+           {/* TOTAL TIME  */}
+            <p>Total time: {recipe.totalTime}</p>
+            <input
+                  type="text"
+                  name="totalTime"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.totalTime}
+                  value={formData.totalTime}
+                  onChange={handleChange}
+                />
+
+{/* CATEGORY */}
             <p>Category: {recipe.categories}</p>
+            <input
+                  type="text"
+                  name="categories"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.categories}
+                  value={formData.categories}
+                  onChange={handleChange}
+                />
+                <p>&nbsp;</p>
+
+{/* INGREDIENTS */}
             <p>Ingredients: {recipe.ingredient}</p>
+            <input
+                  type="text"
+                  name="ingredient"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.ingredient}
+                  value={formData.ingredient}
+                  onChange={handleChange}
+                />
+                <p>&nbsp;</p>
+
+{/* DIRECTIONS */}
             <p>Directions: {recipe.directions}</p>
+            <input
+                  type="text"
+                  name="directions"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.directions}
+                  value={formData.directions}
+                  onChange={handleChange}
+                />
+                <p>&nbsp;</p>
+
+{/* DESCRIPTION */}
             <p>Description: {recipe.description}</p>
+            <input
+                  type="text"
+                  name="description"
+                  className="textInput bg-[#f7f7f2]"
+                  style={editMode}
+                  placeholder={recipe.description}
+                  value={formData.description}
+                  onChange={handleChange}
+                />
+                <p>&nbsp;</p>
+
         </div>
 
         <button
@@ -138,7 +260,7 @@ async function deleteRecipe(evt) {
           type="submit"
           value={recipe._id}
           className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400 float-right"
-          // do we want the todo to be deleted when the button is clicked? Like marking it complete... -K
+          // do we want the recipe to be deleted when the button is clicked? Like marking it complete... -K
           onClick={deleteRecipe}
         >
           Delete

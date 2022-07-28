@@ -50,5 +50,5 @@ async function sendRequest(url, method = "GET", payload = null) {
   console.log("sending request - recipe-api");
   if (res.ok) return res.json();
   console.log(res.json);
-  throw new Error("Not so good. Come on man, you're better than this.");
+  throw new Error("Did not work. You can fix this.");
 }

@@ -6,7 +6,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
     updated}) {
-    const [createData, setCreateData] = useState(false);
+//   const [createData, setCreateData] = useState(false);
   const [formData, setFormData] = useState({
     // add in all fields
     name: "",
@@ -26,16 +26,15 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
   });
 
   //FIXME
-    // const newData = setUpdated();
+    const newData = setUpdated();
 
   async function handleSubmit(evt) {
     evt.preventDefault();
     console.log(`this is the form: ${formData}`);
 
-    const newData = await createData(formData);
-    setFormData(newData);
-    console.log(`this is the new data: ${newData}`);
-    setCreateData(true);
+    setFormData(formData);
+    console.log(`this is the new data: ${formData}`);
+    // setCreateData(true);
     setFormData({
         name: "",
       categories: "",
@@ -54,35 +53,27 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
     })
 
     //sending new data to backend
-    // recipeAPI.newRecipe(formData);
+    recipeAPI.newRecipe(formData);
     // setUpdated(!newData);
 
-    // try an if statement to save changed data
-    // if (formData.name !== "") {
-    // setUpdated(formData);
-    // console.log(`${formData.name} has run`);
-    // }
-
-
-
     // get data again from the backend
-    const recipes = recipeAPI.getAll();
-    setFormData({
-      name: "",
-      categories: "",
-      servings: "",
-      rating: "",
-      difficulty: "",
-      prepTime: "",
-      cookTime: "",
-      totalTime: "",
-      source: "",
-      sourceUrl: "",
-      ingredient: "",
-      description: "",
-      directions: "",
-      notes: "",
-    });
+    // const recipes = recipeAPI.getAll();
+    // setFormData({
+    //   name: "",
+    //   categories: "",
+    //   servings: "",
+    //   rating: "",
+    //   difficulty: "",
+    //   prepTime: "",
+    //   cookTime: "",
+    //   totalTime: "",
+    //   source: "",
+    //   sourceUrl: "",
+    //   ingredient: "",
+    //   description: "",
+    //   directions: "",
+    //   notes: "",
+    // });
   }
 
   //*** function = form data ***//
@@ -144,7 +135,7 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
             editorClassName="editorClassName"
             onEditorStateChange={this.onEditorStateChange}
           /> */}
-          ;<p>&nbsp;</p>
+          <p>&nbsp;</p>
           <button
             type="submit"
             // onClick={handleSubmit}
