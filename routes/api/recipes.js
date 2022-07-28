@@ -6,7 +6,6 @@ const recipesCtrl = require('../../controllers/api/recipes');
 router.get('/', recipesCtrl.index);
 
 //POST /api/recipes/new
-//  FIXME
 router.post('/', recipesCtrl.create);
 
 // POST /api/recipes

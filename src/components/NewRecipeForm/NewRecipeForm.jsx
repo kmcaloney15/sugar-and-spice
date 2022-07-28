@@ -128,6 +128,133 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
               className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
             />
           </div>
+ {/* SERVINGS */}
+ <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Servings:
+            </label>
+            <input
+              type="text"
+              name="servings"
+              value={formData.servings}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+
+ {/* RATING */}
+ <div>
+    {/* look into client side validation to make it so they can only enter in a number */}
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Rating:
+            </label>
+            <input
+              type="text"
+              name="rating"
+              value={formData.rating}
+              placeholder="enter a number here..."
+              className="bg-[#f7f7f2]"
+            />
+            </div>
+
+     {/* Difficulty */}
+     <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Difficulty:
+            </label>
+
+            <select
+              name="difficulty"
+              value={formData.difficulty}
+              placeholder="Select One"
+              className="font-extralight text-2l text-left h-1/2 px-2 py-2 bg-[#f7f7f2]"
+            >
+              {/* // if I want to include categories as a reference */}
+              {/* {allCats.map((cat) => (
+              <option value={cat._id} key={cat._id}>
+                {cat.title}
+              </option>
+            ))}  */}
+
+            <option value="Easy">-</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div>
+ 
+
+ {/* Prep Time */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Prep Time:
+            </label>
+            <input
+              type="text"
+              name="prepTime"
+              value={formData.prepTime}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+
+  {/* Cook Time */}
+  <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Cook Time:
+            </label>
+            <input
+              type="text"
+              name="cookTime"
+              value={formData.cookTime}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+          {/* Total Time */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Total Time:
+            </label>
+            <input
+              type="text"
+              name="totalTime"
+              value={formData.totalTime}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+
+
+ {/* Source */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Source:
+            </label>
+            <input
+              type="text"
+              name="source"
+              value={formData.source}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
           {/* <Editor
             editorState={editorState}
             toolbarClassName="toolbarClassName"
