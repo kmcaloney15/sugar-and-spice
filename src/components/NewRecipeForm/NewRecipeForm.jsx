@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
-    updated}) {
+export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, updated}) {
 //   const [createData, setCreateData] = useState(false);
   const [formData, setFormData] = useState({
     // add in all fields
@@ -32,25 +31,25 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
     evt.preventDefault();
     console.log(`this is the form: ${formData}`);
 
-    setFormData(formData);
-    console.log(`this is the new data: ${formData}`);
+    // setFormData(formData);
+    // console.log(`this is the new data: ${formData}`);
     // setCreateData(true);
-    setFormData({
-        name: "",
-      categories: "",
-      servings: "",
-      rating: "",
-      difficulty: "",
-      prepTime: "",
-      cookTime: "",
-      totalTime: "",
-      source: "",
-      sourceUrl: "",
-      ingredient: "",
-      description: "",
-      directions: "",
-      notes: "",
-    })
+    // setFormData({
+    //     name: "",
+    //   categories: "",
+    //   servings: "",
+    //   rating: "",
+    //   difficulty: "",
+    //   prepTime: "",
+    //   cookTime: "",
+    //   totalTime: "",
+    //   source: "",
+    //   sourceUrl: "",
+    //   ingredient: "",
+    //   description: "",
+    //   directions: "",
+    //   notes: "",
+    // })
 
     //sending new data to backend
     recipeAPI.newRecipe(formData);
@@ -79,10 +78,11 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes,
   //*** function = form data ***//
   function handleChange(evt) {
     const updatedRecipe = { ...formData, [evt.target.name]: evt.target.value };
-
+    console.log(`this is the updatedRecipe: ${updatedRecipe}`);
     // const newRecipe = {[evt.target.name]: evt.target.value };
     // console.log(`this is the new recipeForm: ${newRecipe}`);
     setFormData(updatedRecipe);
+    
 
     console.log(formData);
     console.log(allRecipes);

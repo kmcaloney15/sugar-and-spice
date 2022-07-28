@@ -6,14 +6,15 @@ const recipesCtrl = require('../../controllers/api/recipes');
 router.get('/', recipesCtrl.index);
 
 //POST /api/recipes/new
+//  FIXME
 router.post('/', recipesCtrl.create);
 
 // POST /api/recipes
 // FIXME - edit route is throwing an error
-router.put("/editRecipe/:id", recipesCtrl.editRecipe);
+router.put("/recipes/:id", recipesCtrl.editRecipe);
 
 // DELETE /api/recipes/:id
-router.delete('/deleteRecipe/:id', recipesCtrl.deleteRecipe);
+router.delete('/:id', recipesCtrl.deleteRecipe);
 
 // GET /api/recipes/:id
 router.get('/:id', recipesCtrl.show);

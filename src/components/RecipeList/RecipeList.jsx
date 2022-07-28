@@ -16,7 +16,6 @@ export default function RecipeList({allRecipes, setAllRecipes, setUpdated, updat
     source: "",
     sourceUrl: "",
     ingredient: "",
-    // ingredient: { type: Schema.Types.ObjectId, ref: "Ingredient" },
     description: "",
     directions: "",
     notes: "",

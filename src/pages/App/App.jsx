@@ -18,7 +18,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [allRecipes, setAllRecipes] = useState([]);
   const [updated, setUpdated] = useState(false);
-  // const [editorState, setEditorState] = useState();
+  const [editorState, setEditorState] = useState();
 
   // recipes
   useEffect(
@@ -82,8 +82,8 @@ export default function App() {
               wrapperClassName="wrapperClassName"
               editorClassName="editorClassName"
               onEditorStateChange={this.onEditorStateChange}
-            /> */}
-            ;
+            />
+            ; */}
           </Routes>
         </>
       ) : (

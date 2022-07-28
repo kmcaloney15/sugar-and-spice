@@ -16,12 +16,7 @@ async function index(req, res) {
   // console.log('is the index working?')
   try {
     const recipeList = await Recipe.find({});
-    
-
-    // const recipeList = await Recipe.find({}).populate('category').exec();
-    // .populate('category').exec();
-    // re-sort based upon the sortOrder of the categories
-    // todos.sort((a, b) => a.category.sortOrder - b.category.sortOrder);
+  
     res.json(recipeList);
   } catch {
     res.status(400).json('Bad Serverside')
@@ -29,37 +24,20 @@ async function index(req, res) {
 }
 
 
-
 // create new recipes
 async function create(req, res) {
-  console.log(req.body) // this is the body of the request
+  // console.log("controller create function ran")
+  // console.log(req.body) // this is the body of the request
   try {
-
-    // const one = Category.findOne({title:req.body.category})
     console.log('create recipe controller is working')
-
     const newRecipe = await Recipe.create(req.body);
-    const recipeList = await Recipe.find({});
-    recipeList.push(newRecipe)
-    console.log('new recipe created')
-    console.log(recipeList)
-    //.then((todoList) => {console.log(todoList)})
-    console.log(`controller create is ${newRecipe}`)
-    await recipeList.save();
-    console.log(`${recipeList} from controller create ran`);
-    res.json(recipeList);
-    response.json();
+    console.log(`this is the new recipe ${newRecipe}`)
+    res.json(newRecipe);
+
   } catch (e) {
     res.status(400).json(e)
   }
 }
-
-
-// need to find all todos for a specific user - this might not be necessary -K
-// async function findAllRecipes(userId) {
-//   return await this.find({ user: userId });
-// }
-
 
 // to delete a todo
 async function deleteRecipe(req, res) {
@@ -69,9 +47,6 @@ async function deleteRecipe(req, res) {
   try {
     console.log(req.params.id)
     const one = await Recipe.findByIdAndDelete(req.params.id)
-    // const recipeList = await Todo.find({})
-    // await recipeList.save()
-    // res.json(todoList)
   } catch (e) {
     res.status(400).json(e);
   }

@@ -37,8 +37,8 @@ export default function RecipeDetailPage({
   });
 
   let { id } = useParams();
-  const magicObject = {updated};
-  console.log(magicObject.updated) // returning false... why??
+  // const magicObject = {updated};
+  // console.log(magicObject.updated) // returning false... why??
 
   useEffect(
     function () {
@@ -79,14 +79,15 @@ export default function RecipeDetailPage({
 
 //*** fucntion = creating new category ***//
 async function deleteRecipe(evt) {
-    console.log(evt.target.value);
+    console.log(`this is the delete recipe ${evt.target.value}`);
     const recipes = allRecipes.filter((recipe) => recipe._id !== evt.target.value);
     console.log('delete function running');
     setAllRecipes(recipes);
-    setUpdated(!updated);
+    // setUpdated(!updated);
     await recipeAPI.deleteRecipe(evt.target.value);
     // want to send user back to recipe index page
     navigate(-1)
+    // redirects to look into: talk to Eric
   }
 
 
@@ -183,7 +184,9 @@ async function deleteRecipe(evt) {
                 />
 
            {/* TOTAL TIME  */}
-            <p>Total time: {recipe.totalTime}</p>
+            <p
+            
+            >Total time: {recipe.totalTime}</p>
             <input
                   type="text"
                   name="totalTime"
@@ -195,7 +198,9 @@ async function deleteRecipe(evt) {
                 />
 
 {/* CATEGORY */}
-            <p>Category: {recipe.categories}</p>
+            <p
+            
+            >Category: {recipe.categories}</p>
             <input
                   type="text"
                   name="categories"
@@ -208,7 +213,9 @@ async function deleteRecipe(evt) {
                 <p>&nbsp;</p>
 
 {/* INGREDIENTS */}
-            <p>Ingredients: {recipe.ingredient}</p>
+            <p
+            
+            >Ingredients: {recipe.ingredient}</p>
             <input
                   type="text"
                   name="ingredient"
@@ -221,7 +228,9 @@ async function deleteRecipe(evt) {
                 <p>&nbsp;</p>
 
 {/* DIRECTIONS */}
-            <p>Directions: {recipe.directions}</p>
+            <p
+            
+            >Directions: {recipe.directions}</p>
             <input
                   type="text"
                   name="directions"

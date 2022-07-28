@@ -10,10 +10,10 @@ const recipeSchema = new Schema(
     categories: String,
     servings: String,
     rating: Number,
-    difficulty: {
-      type: String,
-      enum: ["Easy", "Medium", "Hard"],
-    },
+    // difficulty: {
+    //   type: String,
+    //   enum: ["Easy", "Medium", "Hard"],
+    // },
     prepTime: String,
     cookTime: String,
     totalTime: String,

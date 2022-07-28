@@ -1,7 +1,7 @@
 import { getToken } from "./users-service";
 
 // This is the base path of the Express rout we'll defing
-const BASE_URL = "/api/users";
+const BASE_URL = "http://localhost:3001/api/users";
 
 export async function signUp(userData) {
   return sendRequest(BASE_URL, "POST", userData);
