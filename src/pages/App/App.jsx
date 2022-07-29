@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect, useRef } from "react";
 import AuthPage from "../AuthPage/AuthPage";
-import NewOrderPage from "../NewOrderPage/NewOrderPage";
+import HomePage from "../HomePage/HomePage";
 import RecipeIndex from "../RecipeIndex/RecipeIndex";
 import RecipeDetailPage from "../../components/RecipeDetailPage/RecipeDetailPage";
 import NewRecipeForm from "../../components/NewRecipeForm/NewRecipeForm";
@@ -61,7 +61,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/home" element={<NewOrderPage />} />
+            <Route path="/home" element={<HomePage />} />
             <Route
               path="/recipes"
               element={
