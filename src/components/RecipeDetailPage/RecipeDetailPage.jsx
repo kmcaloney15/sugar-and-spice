@@ -40,9 +40,11 @@ export default function RecipeDetailPage({
     // console.log(formData)
     const id = formData._id;
     // console.log(id)
-    const newishUpdatedRecipe = await recipeAPI.editRecipe(id, formData);
+    recipeAPI.editRecipe(id, formData);
     setUpdated(!updated);
     setFormData({});
+    navigate("/recipes");
+
     // setAllRecipes(...allRecipes.push(formData));
   }
 
@@ -55,7 +57,7 @@ export default function RecipeDetailPage({
   const navigate = useNavigate();
 
   //*** fucntion = creating new category ***//
-  async function deleteRecipe(evt) {
+   function deleteRecipe(evt) {
     console.log(`this is the delete recipe ${evt.target.value}`);
     const recipes = allRecipes.filter(
       (recipe) => recipe._id !== evt.target.value
@@ -63,10 +65,10 @@ export default function RecipeDetailPage({
     console.log("delete function running");
     setAllRecipes(recipes);
     // setUpdated(!updated);
-    await recipeAPI.deleteRecipe(evt.target.value);
+    recipeAPI.deleteRecipe(evt.target.value);
     // want to send user back to recipe index page
-    navigate("/recipes");
-    // redirects to look into: talk to Eric
+    setUpdated(!updated);
+    navigate(-1);
   }
 
   //*** function = Edit data ***//
@@ -230,11 +232,11 @@ export default function RecipeDetailPage({
               value={formData.directions}
               onChange={handleChange}
             />
-            {/* <p>&nbsp;</p> */}
             {/* DESCRIPTION */}
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Description:
             </label>
+            {/* parce just around the p tags */}
             <p style={viewMode} className="font-light text-xl ">
               {formData.description}
             </p>

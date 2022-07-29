@@ -107,8 +107,7 @@ export default function App() {
               wrapperClassName="wrapperClassName"
               editorClassName="editorClassName"
               onEditorStateChange={this.onEditorStateChange}
-            />
-            ; */}
+            /> */}
           </Routes>
         </>
       ) : (
