@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, updated, formData, setFormData}) {
-
-
-
-    const newData = setUpdated();
+export default function NewRecipeForm({
+  setUpdated,
+  allRecipes,
+  setAllRecipes,
+  updated,
+  formData,
+  setFormData,
+}) {
+  const newData = setUpdated();
 
   async function handleSubmit(evt) {
     evt.preventDefault();
@@ -24,7 +28,7 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
     // const newRecipe = {[evt.target.name]: evt.target.value };
     // console.log(`this is the new recipeForm: ${newRecipe}`);
     setFormData(updatedRecipe);
-    
+
     console.log(formData);
     console.log(allRecipes);
     // setNewRecipe(evt.target.value);
@@ -32,16 +36,22 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
 
   return (
     <>
-      <div className="p-2 rounded-lg font-light" >
-    
-        <div className="font-light text-lg text-left h-1/2 px-2 py-2">
+      <div
+        className=""
+        // "p-2 rounded-lg font-light" //tailwind
+      >
+        <div
+          className=""
+          // "font-light text-lg text-left h-1/2 px-2 py-2" // tailwind
+        >
           <h3 className="font-semibold text-lg">Create New Recipe</h3>
         </div>
         <form
           action=""
           onChange={handleChange}
           onSubmit={handleSubmit}
-          className="border-black border-[1px] rounded-md py-4 px-4 font-light text-justify"
+          className=""
+          // "border-black border-[1px] rounded-md py-4 px-4 font-light text-justify"
           id="hardshadow"
         >
           {/* NAME */}
@@ -70,8 +80,8 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
               className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
             />
           </div>
- {/* SERVINGS */}
- <div>
+          {/* SERVINGS */}
+          <div>
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Servings:
             </label>
@@ -84,9 +94,9 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
             />
           </div>
 
- {/* RATING */}
- <div>
-    {/* look into client side validation to make it so they can only enter in a number */}
+          {/* RATING */}
+          <div>
+            {/* look into client side validation to make it so they can only enter in a number */}
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Rating:
             </label>
@@ -97,10 +107,10 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
               placeholder="enter a number here..."
               className="bg-[#f7f7f2]"
             />
-            </div>
+          </div>
 
-     {/* Difficulty */}
-     <div>
+          {/* Difficulty */}
+          <div>
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Difficulty:
             </label>
@@ -118,15 +128,14 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
               </option>
             ))}  */}
 
-            <option value="Easy">-</option>
+              <option value="Easy">-</option>
               <option value="Easy">Easy</option>
               <option value="Medium">Medium</option>
               <option value="Hard">Hard</option>
             </select>
           </div>
- 
 
- {/* Prep Time */}
+          {/* Prep Time */}
           <div>
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Prep Time:
@@ -140,8 +149,8 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
             />
           </div>
 
-  {/* Cook Time */}
-  <div>
+          {/* Cook Time */}
+          <div>
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Cook Time:
             </label>
@@ -167,8 +176,7 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
             />
           </div>
 
-
- {/* Source */}
+          {/* Source */}
           <div>
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Source:
@@ -182,21 +190,72 @@ export default function NewRecipeForm({ setUpdated, allRecipes, setAllRecipes, u
             />
           </div>
 
+          {/* Source URL */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Source URL:
+            </label>
+            <input
+              type="text"
+              name="sourceUrl"
+              value={formData.sourceUrl}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+          {/* Ingredients */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Ingredients:
+            </label>
+            <input
+              type="text"
+              name="ingredient"
+              value={formData.ingredient}
+              placeholder="Add ingredients here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+          {/* Description */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Description
+            </label>
+            <input
+              type="text"
+              name="description"
+              value={formData.description}
+              placeholder="write the description here..."
+              className="bg-[#f7f7f2] outline-0"
+            />
+          </div>
+          {/* Directions */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Directions:
+            </label>
+            <input
+              type="text"
+              name="directions"
+              value={formData.directions}
+              placeholder="Add directions here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
+          {/* Notes */}
+          <div>
+            <label className="font-light text-left text-lg h-1/2 px-2 py-2">
+              Notes:
+            </label>
+            <input
+              type="text"
+              name="notes"
+              value={formData.notes}
+              placeholder="Add notes here..."
+              className="bg-[#f7f7f2]"
+            />
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
           {/* <Editor
             editorState={editorState}
             toolbarClassName="toolbarClassName"
