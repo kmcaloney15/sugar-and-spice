@@ -221,7 +221,7 @@ export default function NewRecipeForm({
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Description
             </label>
-            <input
+            <textarea
               type="text"
               name="description"
               value={formData.description}
@@ -234,7 +234,7 @@ export default function NewRecipeForm({
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Directions:
             </label>
-            <input
+            <textarea
               type="text"
               name="directions"
               value={formData.directions}
@@ -247,7 +247,7 @@ export default function NewRecipeForm({
             <label className="font-light text-left text-lg h-1/2 px-2 py-2">
               Notes:
             </label>
-            <input
+            <textarea
               type="text"
               name="notes"
               value={formData.notes}
