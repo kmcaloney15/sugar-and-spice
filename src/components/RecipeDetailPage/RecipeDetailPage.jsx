@@ -255,7 +255,7 @@ export default function RecipeDetailPage({
         </div>
         {/* BUTTONS */}
         {/* REMOVE BUTTONS IF YOU ARE NOT AUTHOR OF RECIPE */}
-        {/* {allowChanges && ( */}
+        {allowChanges && (
           <>
         <button
           className="border-1 border-black bg-black  rounded text-white text-sm px-1 mx-2"
@@ -295,7 +295,7 @@ export default function RecipeDetailPage({
         </Link>
         </>
 
-        {/* )} */}
+        )} 
 
         <Link to="/recipes">
           <button className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400">
