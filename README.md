@@ -15,7 +15,7 @@ Happy cooking!
 ## User Story:
 
 - Users should be able to create their own profiles to get access to the recipe database.
-- Users should be able to create, edit and delete their own recipes.
+- Users should be able to create, edit and delete recipes.
 
 
 ## Snapshot:

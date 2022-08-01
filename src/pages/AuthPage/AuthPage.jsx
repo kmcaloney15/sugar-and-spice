@@ -7,7 +7,7 @@ export default function AuthPage({ setUser }) {
 
   return (
     <main>
-      <h1>AuthPage </h1>
+      <h1>Welcome to Sugar and Spice! </h1>
       <div>
       {showLogin ? (
       <SignUpForm setUser={setUser} />
@@ -18,7 +18,7 @@ export default function AuthPage({ setUser }) {
             onClick={() => setShowLogin(!showLogin)}
             className="bg-[#1f1f1f] text-white font-medium py-2 px-4 rounded hover:ring hover:ring-orange-400"
           >
-            {showLogin ? "SIGN UP" : "LOG IN"}
+            {showLogin ? "LOG IN" : "SIGN UP"}
           </button>
       </div>
     </main> 
