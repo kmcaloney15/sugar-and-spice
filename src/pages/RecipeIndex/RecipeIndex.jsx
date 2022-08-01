@@ -10,6 +10,7 @@ export default function RecipeIndex({
   updated,
   formData,
   setFormData,
+  user,
 }) {
   async function handleCheckToken() {
     const expDate = await usersService.checkToken();
@@ -18,7 +19,7 @@ export default function RecipeIndex({
 
   return (
     <>
-      <h1>Recipe Index</h1>
+      {/* <h1>Recipe Index</h1> */}
       <div className="px-5 py-7">
         <Link to={`/recipes/new`}>
           <button className="border-black bg-black border-t-[1px] rounded-lg font-light text-white text-large py-2 px-3 hover:ring hover:ring-orange-400">
@@ -36,6 +37,7 @@ export default function RecipeIndex({
             updated={updated}
             formData={formData}
             setFormData={setFormData}
+            user={user}
           />
         ) : (
           <div className="text-center">

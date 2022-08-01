@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
-// require("./");
+require("./user");
 
 // make todo schema
 const recipeSchema = new Schema(
   {
-    // user: { type: Schema.Types.ObjectId, ref: 'User' },
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
     name: String,
-    users: [String], //where all users my id number - then you can filter for favorites
+    // users: [String], //where all users my id number - then you can filter for favorites
     categories: String,
     servings: String,
     rating: Number,
@@ -33,7 +33,7 @@ const recipeSchema = new Schema(
 const Recipe = model("Recipe", recipeSchema);
 
 // make category model
-// const Category = model("Category", categorySchema);
+// const User = model("User", userSchema);
 
 ///////////////////////////////////////////////////
 // Export Model

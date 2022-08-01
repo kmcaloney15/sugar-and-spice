@@ -29,9 +29,9 @@ async function create(req, res) {
   // console.log("controller create function ran")
   // console.log(req.body) // this is the body of the request
   try {
-    console.log('create recipe controller is working')
+    // console.log('create recipe controller is working')
     const newRecipe = await Recipe.create(req.body);
-    console.log(`this is the new recipe ${newRecipe}`)
+    // console.log(`this is the new recipe ${newRecipe}`)
     res.json(newRecipe);
 
   } catch (e) {
@@ -42,7 +42,7 @@ async function create(req, res) {
 // to delete a todo
 async function deleteRecipe(req, res) {
   // console.log(req.body)
-  console.log("controller delete ran")
+  // console.log("controller delete ran")
 
   try {
     console.log(req.params.id)
@@ -73,12 +73,14 @@ async function editRecipe(req, res) {
       notes: req.body.notes,
     },{new:true}
   );
-  console.log("editRecipe function ran")
+  // console.log("editRecipe function ran")
 }
 
+// add in error message and don't allow user to edit recipes they don't own
+
 async function show(req, res) {
-  console.log('recipe contl show is working')
-  console.log("req.params.id")
+  // console.log('recipe contl show is working')
+  // console.log("req.params.id")
   const recipeList = await Recipe.findById(req.params.id);
   res.json(recipeList);
 }

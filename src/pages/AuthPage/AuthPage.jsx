@@ -7,7 +7,7 @@ export default function AuthPage({ setUser }) {
 
   return (
     <main>
-      <h1>AuthPage TESTING</h1>
+      <h1>AuthPage </h1>
       <div>
       {showLogin ? (
       <SignUpForm setUser={setUser} />

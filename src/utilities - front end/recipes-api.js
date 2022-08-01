@@ -16,6 +16,8 @@ export function editRecipe(id, data) {
   return sendRequest(`${BASE_URL}/recipes/${id}`, "PUT", data);
 }
 
+// add in where user cannot edit recipe they don't own
+
 // Add an recipe to the recipe list
 // FIXME
 export function newRecipe(recipeData) {

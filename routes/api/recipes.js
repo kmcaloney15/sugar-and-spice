@@ -9,7 +9,6 @@ router.get('/', recipesCtrl.index);
 router.post('/', recipesCtrl.create);
 
 // POST /api/recipes
-// FIXME - edit route is throwing an error
 router.put("/recipes/:id", recipesCtrl.editRecipe);
 
 // DELETE /api/recipes/:id

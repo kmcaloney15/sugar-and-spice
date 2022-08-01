@@ -72,6 +72,7 @@ export default function App() {
                   setUpdated={setUpdated}
                   formData={formData}
                   setFormData={setFormData}
+                  user={user}
                 />
               }
             />
@@ -85,6 +86,7 @@ export default function App() {
                   setUpdated={setUpdated}
                   formData={formData}
                   setFormData={setFormData}
+                  user={user}
                 />
               }
             />
@@ -98,6 +100,7 @@ export default function App() {
                   setUpdated={setUpdated}
                   formData={formData}
                   setFormData={setFormData}
+                  user={user}
                 />
               }
             />
