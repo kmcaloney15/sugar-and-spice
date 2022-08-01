@@ -272,7 +272,7 @@ export default function RecipeDetailPage({
           Close Edit
         </button>
         <button
-          className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400"
+          className=" flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400"
           type="submit"
           value={formData._id}
           style={editMode}
@@ -283,13 +283,13 @@ export default function RecipeDetailPage({
         <button
           type="submit"
           value={formData._id}
-          className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400 float-right"
+          className="flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400 float-right"
           onClick={deleteRecipe}
         >
           Delete
         </button>
         <Link to="/recipes">
-          <button className="bg-[#1f1f1f] flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400">
+          <button className=" flex items-end font-light text-sm text-white mt-1 py-1 px-3 rounded-lg hover:ring hover:ring-orange-400">
             Go To Recipe Page
           </button>
         </Link>

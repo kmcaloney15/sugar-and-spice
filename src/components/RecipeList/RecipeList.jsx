@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import "./RecipeList.css";
 import * as recipeAPI from "../../utilities - front end/recipes-api";
 
 export default function RecipeList({allRecipes, setAllRecipes, setUpdated, updated, formData, setFormData, user}) {
@@ -17,7 +18,7 @@ let viewMode = {}
 
       <div>
       {allRecipes.map((recipe, idx, {setEdit}) => (
-          <div className="border-black border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3  text-left" key={recipe._id}>
+          <div className="RecipeList border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3  text-left" key={recipe._id}>
             {/* <h2>{recipe.name}</h2> */}
             <Link to={`/recipes/${recipe._id}`} style={viewMode}
             >

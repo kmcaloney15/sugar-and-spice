@@ -1,6 +1,7 @@
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 import * as userService from '../../utilities - front end/users-service'
+import Logo from '../../components/Logo/Logo'
 
 export default function NavBar({ user, setUser }) {
     
@@ -13,7 +14,8 @@ export default function NavBar({ user, setUser }) {
     }
 
     return(
-        <nav>
+        <nav className='NavBar'>
+            <Logo />
             <Link to="/home">Home</Link>
             &nbsp; | &nbsp;
             <Link to="/recipes">Recipe Index</Link>

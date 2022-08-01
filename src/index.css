@@ -4,7 +4,7 @@
   --tan-1: #FBF9F6;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
-  --tan-4: #B2AC88;
+  --sage-green: #B2AC88;
   --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
@@ -120,14 +120,14 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--sage-green);
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: var(--sage-green);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -150,7 +150,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--sage-green);
 }
 
 button[type="submit"] {

@@ -1,24 +1,26 @@
-.NavBar {
-    color: var(--tan-1);
+.RecipeList {
+    color: var(--text-light);
     list-style: none;
-    padding: 5;
+    padding: 10;
     font-size: 1.7vw;
+    border-color: var(--tan-2);
+
   }
   
-  .NavBar li {
+  .RecipeList li {
     padding: .6vmin;
     text-align: center;
     border-radius: .5vmin;
     margin-bottom: .5vmin;
   }
       
-  .NavBar li:hover:not(.active) {
+  .RecipeList li:hover:not(.active) {
     cursor: pointer;
     background-color: var(--tan-3);
-    color: var(--text-dark);
+    color: var(--white);
   }
   
-  .NavBar li.active {
+  .RecipeList li.active {
     color: var(--text-dark);
     background-color: var(--tan-1);
     border: .1vmin solid var(--tan-3);
