@@ -1,0 +1,15 @@
+.recipe-detail-page {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+
+
+.prep-time {
+    font-size: 0.8rem;
+    color: #8c8c8c;
+}

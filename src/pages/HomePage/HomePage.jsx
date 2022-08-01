@@ -1,5 +1,5 @@
-
-  import React, { useRef } from 'react';
+import { Link} from "react-router-dom";
+import React, { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 export default function NewOrderPage() {
    
@@ -11,6 +11,17 @@ export default function NewOrderPage() {
   };
   return (
     <>
+    <div className="">
+    <h2>Welcome to Sugar and Spice!</h2>
+    <p>We are so glad you've started your journey in </p>
+    <div className="px-0 py-5">
+        <Link to={`/recipes/new`}>
+          <button className=" hover:ring hover:ring-black-200">
+            Create New Recipe
+          </button>
+        </Link>
+      </div>
+      </div>
       {/* <Editor
         apiKey='npafj3khl7tngth1g362l3296ugs103cc6vk01ae49nk0svq'
         onInit={(evt, editor) => editorRef.current = editor}

@@ -20,13 +20,7 @@ export default function RecipeIndex({
   return (
     <>
       {/* <h1>Recipe Index</h1> */}
-      <div className="px-5 py-7">
-        <Link to={`/recipes/new`}>
-          <button className="border-black bg-black border-t-[1px] rounded-lg font-light text-white text-large py-2 px-3 hover:ring hover:ring-orange-400">
-            Create New Recipe
-          </button>
-        </Link>
-      </div>
+
       {/* // add in a flip so if no recipes, show a message */}
       <div className="px-5 py-7">
         {allRecipes.length > 0 ? (

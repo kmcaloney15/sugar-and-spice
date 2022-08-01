@@ -37,14 +37,14 @@ export default function NewRecipeForm({
   return (
     <>
       <div
-        className=""
+        className="form-container"
         // "p-2 rounded-lg font-light" //tailwind
       >
         <div
           className=""
           // "font-light text-lg text-left h-1/2 px-2 py-2" // tailwind
         >
-          <h3 className="font-semibold text-lg">Create New Recipe</h3>
+          <h1 className="font-semibold text-lg">Create New Recipe</h1>
         </div>
         <form
           action=""

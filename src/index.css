@@ -26,6 +26,12 @@ body {
   height: 100vh;
 }
 
+h1 {
+  font-size: 15px;
+  margin-bottom: 1vmin;
+  color: var(--text-dark);
+}
+
 nav {
   background-color: #B2AC88;
   padding-bottom: 15px;
@@ -89,6 +95,7 @@ code {
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
+  margin-top: 2vmin;
 }
 
 p.error-message {
