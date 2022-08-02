@@ -32,6 +32,10 @@ h1 {
   color: var(--text-dark);
 }
 
+p {
+  color: var(--text-dark);
+}
+
 nav {
   background-color: #B2AC88;
   padding-bottom: 15px;
@@ -113,7 +117,10 @@ form {
 label {
   font-size: 2vmin;
   display: flex;
+  font-size: 2.5vmin;
+font-weight: lighter;
   align-items: center;
+  color: var(--text-dark);
 }
 
 input {
@@ -155,7 +162,7 @@ button.btn-xs {
   padding: .4vmin .5vmin;
 }
 
-button:disabled, form:invalid button[type="submit"] {
+button:disabled, form:invalid  {
   cursor: not-allowed;
   background-color: var(--sage-green);
 }
@@ -163,4 +170,7 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+  background-color: var(--sage-green);
+  color: var(--white);
+
 }

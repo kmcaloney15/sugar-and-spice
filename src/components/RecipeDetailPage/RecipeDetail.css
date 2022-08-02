@@ -7,9 +7,14 @@
     background-color: #fafafa;
 }
 
-
-
 .prep-time {
     font-size: 0.8rem;
     color: #8c8c8c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #8c8c8c 1px solid;
+    margin-bottom: 1rem;
 }
+

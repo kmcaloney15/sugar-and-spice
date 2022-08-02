@@ -50,6 +50,7 @@ export default function NewRecipeForm({
           // "font-light text-lg text-left h-1/2 px-2 py-2" // tailwind
         >
           <h1 className="font-semibold text-lg">Create New Recipe</h1>
+          <br></br>
         </div>
         <form
           action=""
@@ -69,7 +70,7 @@ export default function NewRecipeForm({
               name="name"
               value={formData.name}
               placeholder="Recipe name here"
-              className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
+              className="bg-[#f7f7f2]"
             />
           </div>
           {/* CATEGORY */}
@@ -82,7 +83,7 @@ export default function NewRecipeForm({
               name="categories"
               value={formData.categories}
               placeholder="write here..."
-              className="bg-[#f7f7f2]  border-b-[1px] border-black outline-0"
+              className="bg-[#f7f7f2]  "
             />
           </div>
           {/* SERVINGS */}

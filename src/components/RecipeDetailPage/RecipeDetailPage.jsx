@@ -94,7 +94,7 @@ export default function RecipeDetailPage({
         {/* INPUT DETAILS */}
         <div>
           <div
-            className="form-container"
+            className="form-container text-left rounded-md pt-2 pb-4 px-4 my-3"
             // "border-black border-[1px] rounded-md pt-2 pb-4 px-4 font-light my-3  text-left"
             key={formData._id}
           >
@@ -102,12 +102,12 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Name
             </label>
-            <h1
+            <p
               style={viewMode}
-              className="font-light text-xl border-black"
+              className="font-light"
             >
               {formData.name}
-            </h1>
+            </p>
             {/* &nbsp;&nbsp; */}
             <input
               type="text"
@@ -124,7 +124,7 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Prep time:
             </label>
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light ">
               {formData.prepTime}{" "}
             </p>
             <input
@@ -139,11 +139,11 @@ export default function RecipeDetailPage({
              &nbsp;&nbsp;
 
             {/* COOK TIME */}
-            <label className="font-extralight text-xl text-2l text-left pt-5">
+            <label className="font-extralight  text-2l text-left pt-5">
               Cook Time
             </label>
             &nbsp;
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light  ">
               {formData.cookTime}{" "}
             </p>
             &nbsp;
@@ -160,7 +160,7 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Total time:
             </label>
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light ">
               {formData.totalTime}
             </p>
             <input
@@ -177,7 +177,7 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Category
             </label>
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light  ">
               {formData.categories}
             </p>
             <input
@@ -189,12 +189,11 @@ export default function RecipeDetailPage({
               value={formData.categories}
               onChange={handleChange}
             />
-            <p>&nbsp;</p>
             {/* INGREDIENTS */}
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Ingredients
             </label>
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light  ">
               {formData.ingredient}
             </p>
             <input
@@ -210,7 +209,7 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Description:
             </label>
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light">
               {formData.description}
             </p>
             <input
@@ -226,13 +225,13 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Directions:
             </label>
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light  ">
               {formData.directions}
             </p>
             <input
               type="text"
               name="directions"
-              className="textInput bg-[#f7f7f2]"
+              className="textInput bg-[#f7f7f2] box-content w-32"
               style={editMode}
               placeholder={formData.directions}
               value={formData.directions}
@@ -243,7 +242,7 @@ export default function RecipeDetailPage({
               Description:
             </label>
             {/* parce just around the p tags */}
-            <p style={viewMode} className="font-light text-xl ">
+            <p style={viewMode} className="font-light  ">
               {formData.description}
             </p>
             <input
@@ -268,6 +267,8 @@ export default function RecipeDetailPage({
         >
           Edit
         </button>
+      
+
         <button
           className="button"
           onClick={handleEditing}
@@ -275,6 +276,8 @@ export default function RecipeDetailPage({
         >
           Close Edit
         </button>
+        &nbsp; &nbsp;
+
         <button
           className="button"
           type="submit"
@@ -284,6 +287,8 @@ export default function RecipeDetailPage({
         >
           Save
         </button>
+        &nbsp; &nbsp;
+
         <button
           className="button"
           type="submit"
@@ -292,14 +297,8 @@ export default function RecipeDetailPage({
         >
           Delete
         </button>
-        <button 
-        className="button"
-        type="submit"
-        value={formData._id}
-        onClick={deleteRecipe}
-        >
-          <p>Delete 2</p>
-        </button>
+        &nbsp; &nbsp;
+
         <Link to="/recipes">
           <button className="button">
             Go To Recipe Page
