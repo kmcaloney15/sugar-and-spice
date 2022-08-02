@@ -4,7 +4,7 @@ import * as recipeAPI from "../../utilities - front end/recipes-api";
 import RecipeList from "../../components/RecipeList/RecipeList";
 import { Link } from "react-router-dom";
 import "./RecipeDetail.css";
-import "../../index.css"
+import "../../index.css";
 
 export default function RecipeDetailPage({
   allRecipes,
@@ -18,10 +18,9 @@ export default function RecipeDetailPage({
   // const [recipe, setRecipe] = useState([]);
   const [edit, setEdit] = useState(false);
   const allowChanges = allRecipes.user === user._id;
-  console.log(allRecipes)
+  console.log(allRecipes);
 
   let { id } = useParams();
-
 
   useEffect(
     function () {
@@ -59,7 +58,7 @@ export default function RecipeDetailPage({
   const navigate = useNavigate();
 
   //*** fucntion = creating new category ***//
-   function deleteRecipe(evt) {
+  function deleteRecipe(evt) {
     console.log(`this is the delete recipe ${evt.target.value}`);
     const recipes = allRecipes.filter(
       (recipe) => recipe._id !== evt.target.value
@@ -90,7 +89,6 @@ export default function RecipeDetailPage({
   return (
     <>
       <div className="recipe-detail-page">
-      
         {/* INPUT DETAILS */}
         <div>
           <div
@@ -102,10 +100,7 @@ export default function RecipeDetailPage({
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Name
             </label>
-            <p
-              style={viewMode}
-              className="font-light"
-            >
+            <p style={viewMode} className="font-light">
               {formData.name}
             </p>
             {/* &nbsp;&nbsp; */}
@@ -120,59 +115,92 @@ export default function RecipeDetailPage({
               className="bg-[#f7f7f2]"
             />
             <div className="prep-time">
-            {/* PREP TIME */}
-            <label className="font-extralight text-xl text-2l text-left pt-5">
-              Prep time:
-            </label>
-            <p style={viewMode} className="font-light ">
-              {formData.prepTime}{" "}
-            </p>
-            <input
-              type="text"
-              name="prepTime"
-              className="textInput bg-[#f7f7f2]"
-              style={editMode}
-              // placeholder={formData.prepTime}
-              value={formData.prepTime}
-              onChange={handleChange}
-            />
-             &nbsp;&nbsp;
-
-            {/* COOK TIME */}
-            <label className="font-extralight  text-2l text-left pt-5">
-              Cook Time
-            </label>
-            &nbsp;
-            <p style={viewMode} className="font-light  ">
-              {formData.cookTime}{" "}
-            </p>
-            &nbsp;
-            <input
-              type="text"
-              name="cookTime"
-              className="textInput bg-[#f7f7f2]"
-              style={editMode}
-              // placeholder={formData.cookTime}
-              value={formData.cookTime}
-              onChange={handleChange}
-            />
-            {/* TOTAL TIME  */}
-            <label className="font-extralight text-xl text-2l text-left pt-5">
-              Total time:
-            </label>
-            <p style={viewMode} className="font-light ">
-              {formData.totalTime}
-            </p>
-            <input
-              type="text"
-              name="totalTime"
-              className="textInput bg-[#f7f7f2]"
-              style={editMode}
-              // placeholder={formData.totalTime}
-              value={formData.totalTime}
-              onChange={handleChange}
-            />
+              {/* PREP TIME */}
+              <label className="font-extralight text-xl text-2l text-left pt-5">
+                Prep time:
+              </label>
+              <p style={viewMode} className="font-light ">
+                {formData.prepTime}{" "}
+              </p>
+              <input
+                type="text"
+                name="prepTime"
+                className="textInput bg-[#f7f7f2]"
+                style={editMode}
+                // placeholder={formData.prepTime}
+                value={formData.prepTime}
+                onChange={handleChange}
+              />
+              &nbsp;&nbsp;
+              {/* COOK TIME */}
+              <label className="font-extralight  text-2l text-left pt-5">
+                Cook Time
+              </label>
+              &nbsp;
+              <p style={viewMode} className="font-light  ">
+                {formData.cookTime}{" "}
+              </p>
+              &nbsp;
+              <input
+                type="text"
+                name="cookTime"
+                className="textInput bg-[#f7f7f2]"
+                style={editMode}
+                // placeholder={formData.cookTime}
+                value={formData.cookTime}
+                onChange={handleChange}
+              />
+              {/* TOTAL TIME  */}
+              <label className="font-extralight text-xl text-2l text-left pt-5">
+                Total time:
+              </label>
+              <p style={viewMode} className="font-light ">
+                {formData.totalTime}
+              </p>
+              <input
+                type="text"
+                name="totalTime"
+                className="textInput bg-[#f7f7f2]"
+                style={editMode}
+                // placeholder={formData.totalTime}
+                value={formData.totalTime}
+                onChange={handleChange}
+              />
             </div>
+            {/* <div className="rating"> */}
+            {/* SERVINGS */}
+            <div>
+              <label className="font-extralight text-xl text-2l text-left pt-5">
+                Servings:
+              </label>
+              <p style={viewMode} className="font-light ">
+                {formData.servings}
+              </p>
+              <input
+                type="text"
+                name="servings"
+                style={editMode}
+                value={formData.servings}
+                placeholder="write here..."
+                className="bg-[#f7f7f2]"
+              />
+            </div>
+
+            {/* RATING */}
+            <label className="font-extralight text-xl text-2l text-left pt-5">
+              Rating:
+            </label>
+            <p style={viewMode} className="font-light ">
+              {formData.rating}
+            </p>
+            <input
+              type="text"
+              name="rating"
+              style={editMode}
+              value={formData.rating}
+              placeholder="write here..."
+              className="bg-[#f7f7f2]"
+            />
             {/* CATEGORY */}
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Category
@@ -189,6 +217,34 @@ export default function RecipeDetailPage({
               value={formData.categories}
               onChange={handleChange}
             />
+            {/* </div> */}
+             {/* Difficulty - need help showing on viewMode*/}
+          {/* <div>
+            <label className="font-extralight text-xl text-2l text-left pt-5">
+              Difficulty:
+            </label>
+            <p style={viewMode} className="font-light ">{formData.difficulty}</p>
+
+            <select
+              name="difficulty"
+              value={formData.difficulty}
+              placeholder="Select One"
+              style={editMode}
+              className="font-extralight text-2l text-left h-1/2 px-2 py-2 bg-[#f7f7f2]"
+            > */}
+              {/* // if I want to include categories as a reference */}
+              {/* {allCats.map((cat) => (
+              <option value={cat._id} key={cat._id}>
+                {cat.title}
+              </option>
+            ))}  */}
+
+            {/* <option value="Easy">-</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </div> */}
             {/* INGREDIENTS */}
             <label className="font-extralight text-xl text-2l text-left pt-5">
               Ingredients
@@ -259,51 +315,36 @@ export default function RecipeDetailPage({
         {/* BUTTONS */}
         {/* REMOVE BUTTONS IF YOU ARE NOT AUTHOR OF RECIPE */}
         {/* {allowChanges && ( */}
-          <>
-        <button
-          className="button"
-          onClick={handleEditing}
-          style={viewMode}
-        >
-          Edit
-        </button>
-      
-
-        <button
-          className="button"
-          onClick={handleEditing}
-          style={editMode}
-        >
-          Close Edit
-        </button>
-        &nbsp; &nbsp;
-
-        <button
-          className="button"
-          type="submit"
-          value={formData._id}
-          style={editMode}
-          onClick={handleSubmit}
-        >
-          Save
-        </button>
-        &nbsp; &nbsp;
-
-        <button
-          className="button"
-          type="submit"
-          value={formData._id}
-          onClick={deleteRecipe}
-        >
-          Delete
-        </button>
-        &nbsp; &nbsp;
-
-        <Link to="/recipes">
-          <button className="button">
-            Go To Recipe Page
+        <>
+          <button className="button" onClick={handleEditing} style={viewMode}>
+            Edit
           </button>
-        </Link>
+          <button className="button" onClick={handleEditing} style={editMode}>
+            Close Edit
+          </button>
+          &nbsp; &nbsp;
+          <button
+            className="button"
+            type="submit"
+            value={formData._id}
+            style={editMode}
+            onClick={handleSubmit}
+          >
+            Save
+          </button>
+          &nbsp; &nbsp;
+          <button
+            className="button"
+            type="submit"
+            value={formData._id}
+            onClick={deleteRecipe}
+          >
+            Delete
+          </button>
+          &nbsp; &nbsp;
+          <Link to="/recipes">
+            <button className="button">Go To Recipe Page</button>
+          </Link>
         </>
 
         {/* )}  */}
@@ -313,7 +354,6 @@ export default function RecipeDetailPage({
             Go To Recipe Page
           </button>
         </Link> */}
-        
       </div>
     </>
   );

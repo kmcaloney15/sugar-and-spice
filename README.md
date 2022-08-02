@@ -20,7 +20,7 @@ Happy cooking!
 
 ## Snapshot:
  
-![Finished Homepage](./img/final-homepage.png)
+![Finished Homepage](./img/homepage.png)
 
 Finished homepage.
 
