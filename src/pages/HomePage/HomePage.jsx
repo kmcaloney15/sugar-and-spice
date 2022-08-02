@@ -1,6 +1,7 @@
 import { Link} from "react-router-dom";
 import React, { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import Logo from '../../components/Logo/Logo';
 import "./HomePage.css"
 
 export default function NewOrderPage() {
@@ -14,6 +15,7 @@ export default function NewOrderPage() {
   return (
     <>
     <div className="home-page">
+        <br></br>
         <br></br>
     <h3>Welcome to Sugar and Spice!</h3>
     <p>Browse our recipe database or add your own. </p>
