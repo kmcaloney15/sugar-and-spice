@@ -24,10 +24,6 @@ Happy cooking!
 
 Finished homepage.
 
-![Finished Notes Pages](./img/final-notes.png)
-
-Finished notes page.
-
 
 ## Technologies Used:
 - JavaScript

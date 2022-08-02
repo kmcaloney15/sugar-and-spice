@@ -43,7 +43,7 @@ const Recipe = require("./models/recipe");
     {
       name: 'No-Knead Bread',
         categories: 'Bread',
-        user: 'Katy',
+        user: 'Robert',
         servings: 'Yield one 1 1/2-pound loaf',
         rating: 5,
         difficulty: "Easy",
@@ -77,7 +77,7 @@ const Recipe = require("./models/recipe");
 {
   name: 'Focaccia Bread',
     categories: 'Bread',
-    user: 'Katy',
+    user: 'Lizzy',
     servings: 'Yield one 1 1/2-pound loaf',
     rating: 5,
     difficulty: "Easy",
