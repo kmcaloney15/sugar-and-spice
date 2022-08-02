@@ -162,7 +162,7 @@ button.btn-xs {
   padding: .4vmin .5vmin;
 }
 
-button:disabled,   {
+button:disabled{
   cursor: not-allowed;
   background-color: var(--sage-green);
 }
