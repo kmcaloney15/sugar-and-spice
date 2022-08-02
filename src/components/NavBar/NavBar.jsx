@@ -14,8 +14,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className="NavBar nav">
-      <Logo />
-      <Link to="/home">Home</Link>
+      {/* <Logo /> */}
+      <Link to="/">Home</Link>
       &nbsp; | &nbsp;
       <Link to={`/recipes/new`}>Create New Recipe</Link>
       &nbsp; | &nbsp;

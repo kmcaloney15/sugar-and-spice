@@ -14,8 +14,9 @@ export default function NewOrderPage() {
   return (
     <>
     <div className="home-page">
-    <h2>Welcome to Sugar and Spice!</h2>
-    <p>We are so glad you've started your journey in </p>
+        <br></br>
+    <h3>Welcome to Sugar and Spice!</h3>
+    <p>Browse our recipe database or add your own. </p>
     <div className="px-0 py-5">
         <Link to={`/recipes/new`}>
           <button className=" hover:ring hover:ring-black-200">
