@@ -22,7 +22,7 @@ Happy cooking!
  
 ![Finished Homepage](./img/homepage.png)
 
-Finished homepage.
+Finished login.
 
 
 ## Technologies Used:
