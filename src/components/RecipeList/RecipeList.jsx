@@ -27,6 +27,7 @@ let viewMode = {}
              <p>Rating: {recipe.rating}</p>
              <p>Source: {recipe.source}</p>
              {/* //show user name */}
+             {/*need to in the backend populate   */}
              <p>Author: {recipe.user}</p>
 
             {/* <p>Prep time: {recipe.prepTime} &nbsp; Cook time: {recipe.cookTime} &nbsp; Total time: {recipe.totalTime}</p> */}

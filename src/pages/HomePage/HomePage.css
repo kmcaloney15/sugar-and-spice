@@ -1,0 +1,8 @@
+.home-page {
+    color: var(--text-dark);
+    list-style: none;
+    padding: 10;
+    font-size: 3.7vw;
+    border-color: var(--tan-2);
+
+  }

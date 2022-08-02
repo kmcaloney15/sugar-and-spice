@@ -4,6 +4,7 @@ import * as recipeAPI from "../../utilities - front end/recipes-api";
 import RecipeList from "../../components/RecipeList/RecipeList";
 import { Link } from "react-router-dom";
 import "./RecipeDetail.css";
+import "../../index.css"
 
 export default function RecipeDetailPage({
   allRecipes,
@@ -16,7 +17,8 @@ export default function RecipeDetailPage({
 }) {
   // const [recipe, setRecipe] = useState([]);
   const [edit, setEdit] = useState(false);
-  const allowChanges = formData.user === user._id;
+  const allowChanges = allRecipes.user === user._id;
+  console.log(allRecipes)
 
   let { id } = useParams();
 
@@ -289,6 +291,14 @@ export default function RecipeDetailPage({
           onClick={deleteRecipe}
         >
           Delete
+        </button>
+        <button 
+        className="button"
+        type="submit"
+        value={formData._id}
+        onClick={deleteRecipe}
+        >
+          <p>Delete 2</p>
         </button>
         <Link to="/recipes">
           <button className="button">

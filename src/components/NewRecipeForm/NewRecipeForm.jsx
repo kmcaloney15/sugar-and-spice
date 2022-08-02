@@ -11,14 +11,19 @@ export default function NewRecipeForm({
   updated,
   formData,
   setFormData,
+  user,
 }) {
   const newData = setUpdated();
 
   async function handleSubmit(evt) {
     evt.preventDefault();
     console.log(`this is the form: ${formData}`);
+    //assigning user id to user field
+    formData.user = user.name;
+    console.log(`${formData}form data console log`);
     //sending new data to backend
     recipeAPI.newRecipe(formData);
+    // also 
   }
 
   //*** function = form data ***//
@@ -267,7 +272,7 @@ export default function NewRecipeForm({
           <button
             type="submit"
             // onClick={handleSubmit}
-            className="bg-[#1f1f1f] text-white font-light py-2 px-4 rounded-lg hover:ring hover:ring-orange-400"
+            className="button text-white font-light py-2 px-4 rounded-lg hover:ring hover:ring-orange-400"
           >
             Create New Recipe
           </button>

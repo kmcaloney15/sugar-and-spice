@@ -5,7 +5,8 @@ require("./user");
 // make todo schema
 const recipeSchema = new Schema(
   {
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
+    // user: { type: Schema.Types.ObjectId, ref: 'User' },
+    user: String, // this will just be sending back a string with their name
     name: String,
     // users: [String], //where all users my id number - then you can filter for favorites
     categories: String,
